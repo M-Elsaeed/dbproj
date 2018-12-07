@@ -13,43 +13,7 @@ CREATE TABLE person (
     primary key  (person_id)
 )ENGINE=INNODB;
 #//////////////////////////////
-CREATE TABLE customers (
-    id INTEGER primary key,
-    account_id INTEGER,
-    constraint foreign key (id) references person(person_id) on update cascade on delete cascade,
-    constraint foreign key (account_id) references accounts(id) on update cascade on delete cascade
-
-)ENGINE=INNODB;
-#/////////////////////////////////
-CREATE TABLE employees (
-    id INTEGER PRIMARY KEY,
-    salary DOUBLE,
-    role_id INTEGER,
-    branch_SWIFT VARCHAR(50),
-    CONSTRAINT FOREIGN KEY (id)
-        REFERENCES person (person_id)
-        ON UPDATE CASCADE ON DELETE CASCADE,
-    CONSTRAINT FOREIGN KEY (role_id)
-        REFERENCES role (id)
-        ON UPDATE CASCADE ON DELETE CASCADE,
-    CONSTRAINT FOREIGN KEY (branch_SWIFT)
-        REFERENCES branches (SWIFT)
-        ON UPDATE CASCADE ON DELETE CASCADE
-)  ENGINE=INNODB;
-#/////////////////Revise////////////////
 create table accounts(id integer PRIMARY KEY AUTO_INCREMENT )ENGINE=INNODB;
-#/////////////////////////////////
-CREATE TABLE accounts_sub_accounts (
-    account_id INTEGER,
-    sub_accounts_id INTEGER,
-    currency_id INTEGER,
-    balance double,
-	primary key (account_id ,sub_accounts_id,currency_id),
-    constraint foreign key (account_id) references accounts(id) on update cascade on delete cascade,
-    constraint foreign key (sub_account_id) references sub_accounts(id) on update cascade on delete cascade,
-    constraint foreign key (currency_id) references currencies(id) on update cascade on delete cascade
-    
-)ENGINE=INNODB;
 #/////////////////////////////////
  CREATE TABLE sub_accounts (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -58,49 +22,22 @@ CREATE TABLE accounts_sub_accounts (
     interest_rate DOUBLE,
     interest_interval INTEGER
 )  ENGINE=INNODB;
-#/////////////////////////////////
-CREATE TABLE payroll (
-    id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    employee_id INTEGER,
-    payment_date DATE,
-    amount DOUBLE ,
-    bonuses DOUBLE,
-    penalties DOUBLE,
-    constraint foreign key (employee_id) references person(person_id) on update cascade on delete cascade,
-    constraint foreign key (amount) references employees(salary) on update cascade on delete cascade
-)ENGINE=INNODB;
-#/////////////////////////////////
+#//////////////////////////////
 create table currencies(
     id INTEGER primary KEY AUTO_INCREMENT ,
 triple_code char(3),
 exchange_rate double
 )ENGINE=INNODB;
-#////////////////////////////////
-create table roles (
-    id INTEGER primary KEY AUTO_INCREMENT ,
-r_name varchar(50) ,
-dept_id integer,
-constraint foreign key (dept_id) references department(id) on update cascade on delete cascade
-)ENGINE=INNODB;
-#////////////////////////////////
-create table departments(
-    id INTEGER primary KEY AUTO_INCREMENT ,
-d_name varchar(50)
-)ENGINE=INNODB;
 #/////////////////////////////////
-create table transactions
-(
+CREATE TABLE issuers (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    issuerName VARCHAR(25)
+)ENGINE=INNODB;
+#//////////////////////////////////
+create table ATMs(
     id INTEGER primary KEY AUTO_INCREMENT ,
-from_account integer,
-from_subAccount integer,
-to_account integer,
-to_subAccount integer,
-amount double,
-t_time datetime,
-	constraint foreign key (from_account) references accounts(id) on update cascade on delete cascade,
-    constraint foreign key (from_sub_account) references sub_accounts(id) on update cascade on delete cascade,
-    constraint foreign key (to_account) references accounts(id) on update cascade on delete cascade,
-    constraint foreign key (to_sub_account) references sub_accounts(id) on update cascade on delete cascade
+address varchar (50),
+balance double
 )ENGINE=INNODB;
 #//////////////////////////////////
 create table branches (
@@ -113,18 +50,79 @@ city varchar(10),
 opening date
 )ENGINE=INNODB;
 #///////////////////////////////////
-create table ATMs(
-    id INTEGER primary KEY AUTO_INCREMENT ,
-address varchar (50),
-balance double
+CREATE TABLE departments (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    d_name VARCHAR(50)
+)  ENGINE=INNODB;
+#/////////////////////////////////
+CREATE TABLE customers (
+    id INTEGER primary key,
+    account_id INTEGER,
+    constraint foreign key (id) references person(person_id) on update cascade on delete cascade,
+    constraint foreign key (account_id) references accounts(id) on update cascade on delete cascade
+
 )ENGINE=INNODB;
-#//////////////////////////////////
-CREATE TABLE customer_cards (
-    account_id INTEGER ,
-    cnumber VARCHAR(16),
-    primary key(account_id,cnumber),
+#/////////////////////////////////
+create table roles (
+    id INTEGER primary KEY AUTO_INCREMENT ,
+r_name varchar(50) ,
+dept_id integer,
+constraint foreign key (dept_id) references departments(id) on update cascade on delete cascade
+)ENGINE=INNODB;
+#////////////////////////////////
+CREATE TABLE employees (
+    id INTEGER PRIMARY KEY,
+    salary DOUBLE,
+    role_id INTEGER,
+    branch_SWIFT VARCHAR(50),
+constraint foreign key (id) references person(person_id) on update cascade on delete cascade,
+    CONSTRAINT FOREIGN KEY (role_id)
+        REFERENCES roles (id)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT FOREIGN KEY (branch_SWIFT)
+        REFERENCES branches (SWIFT)
+        ON UPDATE CASCADE ON DELETE CASCADE
+)  ENGINE=INNODB;
+#/////////////////Revise////////////////
+#/////////////////////////////////
+CREATE TABLE accounts_sub_accounts (
+    account_id INTEGER,
+    subaccount_id INTEGER,
+    currency_id INTEGER,
+    balance double,
+	primary key (account_id ,subaccount_id,currency_id),
     constraint foreign key (account_id) references accounts(id) on update cascade on delete cascade,
-    constraint foreign key (cnumber) references cards(cnumber) on update cascade on delete cascade
+    constraint foreign key (subaccount_id) references sub_accounts(id) on update cascade on delete cascade,
+    constraint foreign key (currency_id) references currencies(id) on update cascade on delete cascade
+    
+)ENGINE=INNODB;
+
+#/////////////////////////////////
+CREATE TABLE payroll (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    employee_id INTEGER,
+    payment_date DATE,
+    amount DOUBLE ,
+    bonuses DOUBLE,
+    penalties DOUBLE,
+    constraint foreign key (employee_id) references employees(id) on update cascade on delete cascade,
+    constraint foreign key (amount) references employees(salary) on update cascade on delete cascade
+)ENGINE=INNODB;
+
+#////////////////////////////////
+create table transactions
+(
+    id INTEGER primary KEY AUTO_INCREMENT ,
+from_account integer,
+from_subAccount integer,
+to_account integer,
+to_subAccount integer,
+amount double,
+t_time datetime,
+	constraint foreign key (from_account) references accounts(id) on update cascade on delete cascade,
+    constraint foreign key (from_subAccount) references sub_accounts(id) on update cascade on delete cascade,
+    constraint foreign key (to_account) references accounts(id) on update cascade on delete cascade,
+    constraint foreign key (to_subAccount) references sub_accounts(id) on update cascade on delete cascade
 )ENGINE=INNODB;
 #//////////////////////////////////
 create table cards(
@@ -140,8 +138,11 @@ constraint foreign key (account_id) references accounts(id) on update cascade on
     constraint foreign key (issuer_id) references issuers(id) on update cascade on delete cascade
 )ENGINE=INNODB;
 #//////////////////////////////////
-CREATE TABLE issuers (
-    id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    issuerName VARCHAR(25)
+CREATE TABLE customer_cards (
+    account_id INTEGER ,
+    cnumber VARCHAR(16),
+    primary key(account_id,cnumber),
+    constraint foreign key (account_id) references accounts(id) on update cascade on delete cascade,
+    constraint foreign key (cnumber) references cards(cnumber) on update cascade on delete cascade
 )ENGINE=INNODB;
 #//////////////////////////////////
