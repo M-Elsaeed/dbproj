@@ -30,8 +30,9 @@ exchange_rate double
 )ENGINE=INNODB;
 #/////////////////////////////////
 CREATE TABLE issuers (
-    id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    issuerName VARCHAR(25)
+    id INTEGER AUTO_INCREMENT,
+    issuerName VARCHAR(25),
+    primary key(id)
 )ENGINE=INNODB;
 #//////////////////////////////////
 create table ATMs(
@@ -102,12 +103,12 @@ CREATE TABLE payroll (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     employee_id INTEGER,
     payment_date DATE,
-    amount DOUBLE ,
     bonuses DOUBLE,
     penalties DOUBLE,
-    constraint foreign key (employee_id) references employees(id) on update cascade on delete cascade,
-    constraint foreign key (amount) references employees(salary) on update cascade on delete cascade
-)ENGINE=INNODB;
+    CONSTRAINT FOREIGN KEY (employee_id)
+    REFERENCES employees (id)
+    ON UPDATE CASCADE ON DELETE CASCADE
+)  ENGINE=INNODB;
 
 #////////////////////////////////
 create table transactions
@@ -125,18 +126,22 @@ t_time datetime,
     constraint foreign key (to_subAccount) references sub_accounts(id) on update cascade on delete cascade
 )ENGINE=INNODB;
 #//////////////////////////////////
-create table cards(
-cnumber varchar(16) primary key  ,
-issuer_id varchar(25),
-account_id int,
-issue_date date,
-expirey_date date,
-daily_limit double,
-ctype enum('debit','credit'),
-CVV varchar(3),
-constraint foreign key (account_id) references accounts(id) on update cascade on delete cascade,
-    constraint foreign key (issuer_id) references issuers(id) on update cascade on delete cascade
-)ENGINE=INNODB;
+CREATE TABLE cards (
+    cnumber VARCHAR(16) PRIMARY KEY,
+    issuer_id INT,
+    account_id INT,
+    issue_date DATE,
+    expirey_date DATE,
+    daily_limit DOUBLE,
+    ctype ENUM('debit', 'credit'),
+    CVV VARCHAR(3),
+    CONSTRAINT FOREIGN KEY (issuer_id)
+        REFERENCES issuers (id)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT FOREIGN KEY (account_id)
+        REFERENCES accounts (id)
+        ON UPDATE CASCADE ON DELETE CASCADE
+)  ENGINE=INNODB;
 #//////////////////////////////////
 CREATE TABLE customer_cards (
     account_id INTEGER ,
