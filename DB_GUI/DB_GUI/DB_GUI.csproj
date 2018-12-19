@@ -59,6 +59,12 @@
     <Compile Include="Transfer funds.Designer.cs">
       <DependentUpon>Transfer funds.cs</DependentUpon>
     </Compile>
+    <Compile Include="utility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="utility.Designer.cs">
+      <DependentUpon>utility.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,6 +79,9 @@
     </Compile>
     <EmbeddedResource Include="Transfer funds.resx">
       <DependentUpon>Transfer funds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="utility.resx">
+      <DependentUpon>utility.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
