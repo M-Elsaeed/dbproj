@@ -28,35 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.transferBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.toAccountField = new System.Windows.Forms.TextBox();
             this.amountField = new System.Windows.Forms.TextBox();
             this.fromAccountField = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.toSubaccountField = new System.Windows.Forms.TextBox();
+            this.fromSubaccountField = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // transferBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(668, 387);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 37);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Transfer";
-            this.button1.UseVisualStyleBackColor = true;
+            this.transferBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transferBtn.Location = new System.Drawing.Point(668, 387);
+            this.transferBtn.Name = "transferBtn";
+            this.transferBtn.Size = new System.Drawing.Size(95, 37);
+            this.transferBtn.TabIndex = 24;
+            this.transferBtn.Text = "Transfer";
+            this.transferBtn.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -67,28 +64,6 @@
             this.label6.Size = new System.Drawing.Size(325, 55);
             this.label6.TabIndex = 23;
             this.label6.Text = "Transfer form";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(397, 246);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 24);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Currency";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "€ ",
-            "$ ",
-            "£ "});
-            this.comboBox1.Location = new System.Drawing.Point(563, 246);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(44, 24);
-            this.comboBox1.TabIndex = 21;
             // 
             // toAccountField
             // 
@@ -101,9 +76,9 @@
             // amountField
             // 
             this.amountField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.amountField.Location = new System.Drawing.Point(188, 239);
+            this.amountField.Location = new System.Drawing.Point(208, 306);
             this.amountField.Name = "amountField";
-            this.amountField.Size = new System.Drawing.Size(100, 28);
+            this.amountField.Size = new System.Drawing.Size(172, 28);
             this.amountField.TabIndex = 19;
             // 
             // fromAccountField
@@ -114,15 +89,6 @@
             this.fromAccountField.Name = "fromAccountField";
             this.fromAccountField.Size = new System.Drawing.Size(210, 28);
             this.fromAccountField.TabIndex = 18;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(47, 332);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 28);
-            this.dateTimePicker1.TabIndex = 17;
             // 
             // label4
             // 
@@ -138,7 +104,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 242);
+            this.label3.Location = new System.Drawing.Point(70, 310);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 24);
             this.label3.TabIndex = 15;
@@ -185,21 +151,21 @@
             this.label8.TabIndex = 26;
             this.label8.Text = "Account";
             // 
-            // textBox1
+            // toSubaccountField
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(563, 175);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 28);
-            this.textBox1.TabIndex = 27;
+            this.toSubaccountField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toSubaccountField.Location = new System.Drawing.Point(563, 175);
+            this.toSubaccountField.Name = "toSubaccountField";
+            this.toSubaccountField.Size = new System.Drawing.Size(200, 28);
+            this.toSubaccountField.TabIndex = 27;
             // 
-            // textBox2
+            // fromSubaccountField
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(563, 115);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 28);
-            this.textBox2.TabIndex = 28;
+            this.fromSubaccountField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromSubaccountField.Location = new System.Drawing.Point(563, 115);
+            this.fromSubaccountField.Name = "fromSubaccountField";
+            this.fromSubaccountField.Size = new System.Drawing.Size(200, 28);
+            this.fromSubaccountField.TabIndex = 28;
             // 
             // label9
             // 
@@ -228,18 +194,15 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.fromSubaccountField);
+            this.Controls.Add(this.toSubaccountField);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.transferBtn);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.toAccountField);
             this.Controls.Add(this.amountField);
             this.Controls.Add(this.fromAccountField);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -253,22 +216,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button transferBtn;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox toAccountField;
         private System.Windows.Forms.TextBox amountField;
         private System.Windows.Forms.TextBox fromAccountField;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox toSubaccountField;
+        private System.Windows.Forms.TextBox fromSubaccountField;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
     }
