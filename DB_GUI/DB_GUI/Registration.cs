@@ -10,23 +10,21 @@ using System.Windows.Forms;
 
 namespace DB_GUI
 {
-    public partial class Login : Form
+    public partial class Registration : Form
     {
-        Registration registrationForm = new Registration();
-        public Login()
+        public Registration()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Registration_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void registerbtn_Click(object sender, EventArgs e)
         {
-            registrationForm.Show();
-            this.Hide();
+            //Program.cmd.CommandText = "SELECT * FROM bank.atms;";
         }
     }
 }
