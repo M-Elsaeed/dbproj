@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace DB_GUI
 {
-    public partial class utility : Form
+    public partial class settings : Form
     {
-        public utility()
+        public settings()
         {
             InitializeComponent();
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changePasswordLbl_Click(object sender, EventArgs e)
         {
 
         }
