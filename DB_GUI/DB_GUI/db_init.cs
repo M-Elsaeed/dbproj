@@ -12,7 +12,7 @@ namespace DB_GUI
 
         static db_init()
         {
-            connectionString = "Server=127.0.0.1;" +
+            connectionString = "Server=localhost;" +
                                 "Port=3306;" +
                                 "Database=bank;" +
                                 "Uid=root;" +
