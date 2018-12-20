@@ -34,18 +34,31 @@ namespace DB_GUI
         {
             string birthdate = birthdaytimepicker.Text;
 
-            string query = "INSERT INTO `bank`.`person` (`national_id`, `person_name`, `birth_date`, `address`, `city`, `phone_number`, `email`) VALUES('" + nidtxtbox.Text + "', '" + nametxtbox.Text + "', '" + birthdate + "', '" + addtxtbox.Text + "', '" + citytxtbox.Text + "', '" + phoneNotxtbox.Text + "', '" + emailtxtbox.Text + "');";
-
-            DBInit.cmd.CommandText = query;
-
+            string query1 = "INSERT INTO `bank`.`person` (`national_id`, `person_name`, `birth_date`, `address`, `city`, `phone_number`, `email`) VALUES('" + nidtxtbox.Text + "', '" + nametxtbox.Text + "', '" + birthdate + "', '" + addtxtbox.Text + "', '" + citytxtbox.Text + "', '" + phoneNotxtbox.Text + "', '" + emailtxtbox.Text + "');";
+            DBInit.cmd.CommandText = query1;
             DBInit.cmd.ExecuteScalar();
 
-            if (true)
+            if (employeeRadio.Checked)
             {
+                string query2 = "INSERT INTO `bank`.`employees` (`id`, `salary`, `role_id`) VALUES ('"+nidtxtbox.Text+"', '"+salarytxtbox.Text+"', '"+RoleIDComboBox.Text+"');";
+                DBInit.cmd.CommandText = query2;
+                DBInit.cmd.ExecuteScalar();
+                string query5 = "INSERT INTO `bank`.`empl_accounts` (`empl_id`, `username`, `user_password`) VALUES ('" + nidtxtbox.Text + "', '"+userNameTxtBox.Text+"', '"+passwordTxtBox.Text+"');";
+                DBInit.cmd.CommandText = query5;
+                DBInit.cmd.ExecuteScalar();
+                MessageBox.Show("Registration Successful");
+            }
+            else if (customerRario.Checked)
+            {
+                string query3 = "INSERT INTO `bank`.`customers` (`id`) VALUES ('"+nidtxtbox.Text+"');";
+                DBInit.cmd.CommandText = query3;
+                DBInit.cmd.ExecuteScalar();
 
+                string query4 = "SELECT account_id FROM bank.customers WHERE id = " + nidtxtbox.Text + ";";
+                DBInit.cmd.CommandText = query4;
+                accountIDTxtbox.Text= Convert.ToString(DBInit.cmd.ExecuteScalar());
+                MessageBox.Show("Registration Successful");
             }
         }
-        
-
     }
 }
