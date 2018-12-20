@@ -23,7 +23,6 @@ namespace DB_GUI
         private void registerbtn_Click(object sender, EventArgs e)
         {
             registrationForm.Show();
-            this.Hide();
         }
 
         private void loginBtn_Click(object sender, EventArgs e)

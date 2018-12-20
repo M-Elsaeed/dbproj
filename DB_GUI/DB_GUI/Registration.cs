@@ -9,19 +9,18 @@ namespace DB_GUI
         public Registration()
         {
             InitializeComponent();
+            birthdaytimepicker.CustomFormat = "yyyy-MM-dd HH:mm:ss";
         }
 
         private void registerbtn_Click(object sender, EventArgs e)
         {
-            db_init.cmd.CommandText = "SELECT * FROM bank.atms;";
+            string birthdate = birthdaytimepicker.Text;
 
-            MySqlDataReader reader = db_init.cmd.ExecuteReader();
+            string query = "INSERT INTO `bank`.`person` (`national_id`, `person_name`, `birth_date`, `address`, `city`, `phone_number`, `email`) VALUES('"+nidtxtbox.Text+"', '"+nametxtbox.Text+"', '"+ birthdate + "', '"+addtxtbox.Text+"', '"+citytxtbox.Text+"', '"+phoneNotxtbox.Text+"', '"+emailtxtbox.Text+"');";
 
-            while (reader.Read())
-            {
-                MessageBox.Show(reader["id"].ToString());
-                MessageBox.Show(reader["addreSS"].ToString());
-            }
+            db_init.cmd.CommandText = query;
+
+            db_init.cmd.ExecuteReader();
         }
     }
 }

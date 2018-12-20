@@ -151,10 +151,12 @@
             // birthdaytimepicker
             // 
             this.birthdaytimepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birthdaytimepicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.birthdaytimepicker.Location = new System.Drawing.Point(298, 356);
             this.birthdaytimepicker.Name = "birthdaytimepicker";
             this.birthdaytimepicker.Size = new System.Drawing.Size(329, 29);
             this.birthdaytimepicker.TabIndex = 11;
+            this.birthdaytimepicker.Value = new System.DateTime(2018, 12, 20, 1, 56, 0, 0);
             // 
             // citytxtbox
             // 
