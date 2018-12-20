@@ -130,7 +130,7 @@
             this.emailtxtbox.Location = new System.Drawing.Point(573, 194);
             this.emailtxtbox.Name = "emailtxtbox";
             this.emailtxtbox.Size = new System.Drawing.Size(127, 29);
-            this.emailtxtbox.TabIndex = 27;
+            this.emailtxtbox.TabIndex = 6;
             // 
             // citytxtbox
             // 
@@ -138,7 +138,7 @@
             this.citytxtbox.Location = new System.Drawing.Point(573, 123);
             this.citytxtbox.Name = "citytxtbox";
             this.citytxtbox.Size = new System.Drawing.Size(127, 29);
-            this.citytxtbox.TabIndex = 26;
+            this.citytxtbox.TabIndex = 5;
             // 
             // birthdaytimepicker
             // 
@@ -147,7 +147,7 @@
             this.birthdaytimepicker.Location = new System.Drawing.Point(239, 270);
             this.birthdaytimepicker.Name = "birthdaytimepicker";
             this.birthdaytimepicker.Size = new System.Drawing.Size(461, 29);
-            this.birthdaytimepicker.TabIndex = 25;
+            this.birthdaytimepicker.TabIndex = 7;
             this.birthdaytimepicker.Value = new System.DateTime(2018, 12, 20, 1, 56, 0, 0);
             // 
             // phoneNotxtbox
@@ -156,7 +156,7 @@
             this.phoneNotxtbox.Location = new System.Drawing.Point(239, 195);
             this.phoneNotxtbox.Name = "phoneNotxtbox";
             this.phoneNotxtbox.Size = new System.Drawing.Size(127, 29);
-            this.phoneNotxtbox.TabIndex = 24;
+            this.phoneNotxtbox.TabIndex = 3;
             // 
             // addtxtbox
             // 
@@ -164,7 +164,7 @@
             this.addtxtbox.Location = new System.Drawing.Point(573, 47);
             this.addtxtbox.Name = "addtxtbox";
             this.addtxtbox.Size = new System.Drawing.Size(127, 29);
-            this.addtxtbox.TabIndex = 23;
+            this.addtxtbox.TabIndex = 4;
             // 
             // nidtxtbox
             // 
@@ -172,7 +172,7 @@
             this.nidtxtbox.Location = new System.Drawing.Point(239, 121);
             this.nidtxtbox.Name = "nidtxtbox";
             this.nidtxtbox.Size = new System.Drawing.Size(127, 29);
-            this.nidtxtbox.TabIndex = 22;
+            this.nidtxtbox.TabIndex = 2;
             // 
             // nametxtbox
             // 
@@ -180,7 +180,7 @@
             this.nametxtbox.Location = new System.Drawing.Point(239, 43);
             this.nametxtbox.Name = "nametxtbox";
             this.nametxtbox.Size = new System.Drawing.Size(127, 29);
-            this.nametxtbox.TabIndex = 21;
+            this.nametxtbox.TabIndex = 1;
             // 
             // emaillbl
             // 

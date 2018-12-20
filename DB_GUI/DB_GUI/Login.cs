@@ -17,6 +17,7 @@ namespace DB_GUI
         public Login()
         {
             InitializeComponent();
+            loginBtn.Enabled = false;
         }
 
         private void registerbtn_Click(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace DB_GUI
             String query = "SELECT user_password FROM bank.empl_accounts WHERE (`userName` = '"+usernameField.Text+"');";
             DBInit.cmd.CommandText = query;
 
-            if (passwordField.Text== Convert.ToString(DBInit.cmd.ExecuteScalar()))
+            if (passwordField.Text.Equals(Convert.ToString(DBInit.cmd.ExecuteScalar())))
             {
                 Program.serviceFrom = new services_page();
                 Program.serviceFrom.Show();
@@ -42,6 +43,15 @@ namespace DB_GUI
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void passwordField_TextChanged(object sender, EventArgs e)
+        {
+            loginBtn.Enabled = true;
+            if (passwordField.Text == "")
+            {
+                loginBtn.Enabled = false;
+            }
         }
     }
 }

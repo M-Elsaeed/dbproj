@@ -51,7 +51,7 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(393, 318);
+            this.loginBtn.Location = new System.Drawing.Point(293, 318);
             this.loginBtn.Margin = new System.Windows.Forms.Padding(2);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(96, 37);
@@ -68,6 +68,7 @@
             this.passwordField.Name = "passwordField";
             this.passwordField.Size = new System.Drawing.Size(200, 24);
             this.passwordField.TabIndex = 9;
+            this.passwordField.TextChanged += new System.EventHandler(this.passwordField_TextChanged);
             // 
             // usernameField
             // 
@@ -102,7 +103,7 @@
             // 
             // registerbtn
             // 
-            this.registerbtn.Location = new System.Drawing.Point(293, 318);
+            this.registerbtn.Location = new System.Drawing.Point(393, 318);
             this.registerbtn.Margin = new System.Windows.Forms.Padding(2);
             this.registerbtn.Name = "registerbtn";
             this.registerbtn.Size = new System.Drawing.Size(96, 37);
