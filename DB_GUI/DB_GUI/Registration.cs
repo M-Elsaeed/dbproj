@@ -13,9 +13,9 @@ namespace DB_GUI
 
         private void registerbtn_Click(object sender, EventArgs e)
         {
-            db_init.cmd.CommandText = "SELECT * FROM bank.atms;";
+            DBInit.cmd.CommandText = "SELECT * FROM bank.atms;";
 
-            MySqlDataReader reader = db_init.cmd.ExecuteReader();
+            MySqlDataReader reader = DBInit.cmd.ExecuteReader();
 
             while (reader.Read())
             {
