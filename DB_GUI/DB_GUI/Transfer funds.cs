@@ -47,5 +47,10 @@ namespace DB_GUI
 
         }
 
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Program.serviceFrom.Show();
+            this.Close();
+        }
     }
 }

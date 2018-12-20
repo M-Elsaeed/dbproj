@@ -51,12 +51,17 @@
             this.accountIDTxtbox = new System.Windows.Forms.TextBox();
             this.accountIDlbl = new System.Windows.Forms.Label();
             this.employeePnl = new System.Windows.Forms.Panel();
+            this.userNameTxtBox = new System.Windows.Forms.TextBox();
+            this.passwordTxtBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.RoleIDComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.roleidtxtid = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.salarytxtbox = new System.Windows.Forms.TextBox();
             this.customerRario = new System.Windows.Forms.RadioButton();
             this.employeeRadio = new System.Windows.Forms.RadioButton();
+            this.backBtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -125,7 +130,7 @@
             this.emailtxtbox.Location = new System.Drawing.Point(573, 194);
             this.emailtxtbox.Name = "emailtxtbox";
             this.emailtxtbox.Size = new System.Drawing.Size(127, 29);
-            this.emailtxtbox.TabIndex = 27;
+            this.emailtxtbox.TabIndex = 6;
             // 
             // citytxtbox
             // 
@@ -133,7 +138,7 @@
             this.citytxtbox.Location = new System.Drawing.Point(573, 123);
             this.citytxtbox.Name = "citytxtbox";
             this.citytxtbox.Size = new System.Drawing.Size(127, 29);
-            this.citytxtbox.TabIndex = 26;
+            this.citytxtbox.TabIndex = 5;
             // 
             // birthdaytimepicker
             // 
@@ -142,7 +147,7 @@
             this.birthdaytimepicker.Location = new System.Drawing.Point(239, 270);
             this.birthdaytimepicker.Name = "birthdaytimepicker";
             this.birthdaytimepicker.Size = new System.Drawing.Size(461, 29);
-            this.birthdaytimepicker.TabIndex = 25;
+            this.birthdaytimepicker.TabIndex = 7;
             this.birthdaytimepicker.Value = new System.DateTime(2018, 12, 20, 1, 56, 0, 0);
             // 
             // phoneNotxtbox
@@ -151,7 +156,7 @@
             this.phoneNotxtbox.Location = new System.Drawing.Point(239, 195);
             this.phoneNotxtbox.Name = "phoneNotxtbox";
             this.phoneNotxtbox.Size = new System.Drawing.Size(127, 29);
-            this.phoneNotxtbox.TabIndex = 24;
+            this.phoneNotxtbox.TabIndex = 3;
             // 
             // addtxtbox
             // 
@@ -159,7 +164,7 @@
             this.addtxtbox.Location = new System.Drawing.Point(573, 47);
             this.addtxtbox.Name = "addtxtbox";
             this.addtxtbox.Size = new System.Drawing.Size(127, 29);
-            this.addtxtbox.TabIndex = 23;
+            this.addtxtbox.TabIndex = 4;
             // 
             // nidtxtbox
             // 
@@ -167,7 +172,7 @@
             this.nidtxtbox.Location = new System.Drawing.Point(239, 121);
             this.nidtxtbox.Name = "nidtxtbox";
             this.nidtxtbox.Size = new System.Drawing.Size(127, 29);
-            this.nidtxtbox.TabIndex = 22;
+            this.nidtxtbox.TabIndex = 2;
             // 
             // nametxtbox
             // 
@@ -175,7 +180,7 @@
             this.nametxtbox.Location = new System.Drawing.Point(239, 43);
             this.nametxtbox.Name = "nametxtbox";
             this.nametxtbox.Size = new System.Drawing.Size(127, 29);
-            this.nametxtbox.TabIndex = 21;
+            this.nametxtbox.TabIndex = 1;
             // 
             // emaillbl
             // 
@@ -266,9 +271,9 @@
             // 
             this.customePnl.Controls.Add(this.accountIDTxtbox);
             this.customePnl.Controls.Add(this.accountIDlbl);
-            this.customePnl.Location = new System.Drawing.Point(0, 105);
+            this.customePnl.Location = new System.Drawing.Point(0, 328);
             this.customePnl.Name = "customePnl";
-            this.customePnl.Size = new System.Drawing.Size(796, 242);
+            this.customePnl.Size = new System.Drawing.Size(796, 19);
             this.customePnl.TabIndex = 16;
             // 
             // accountIDTxtbox
@@ -291,8 +296,12 @@
             // 
             // employeePnl
             // 
+            this.employeePnl.Controls.Add(this.userNameTxtBox);
+            this.employeePnl.Controls.Add(this.passwordTxtBox);
+            this.employeePnl.Controls.Add(this.label4);
+            this.employeePnl.Controls.Add(this.label3);
+            this.employeePnl.Controls.Add(this.RoleIDComboBox);
             this.employeePnl.Controls.Add(this.label1);
-            this.employeePnl.Controls.Add(this.roleidtxtid);
             this.employeePnl.Controls.Add(this.label2);
             this.employeePnl.Controls.Add(this.salarytxtbox);
             this.employeePnl.Location = new System.Drawing.Point(3, 105);
@@ -300,29 +309,87 @@
             this.employeePnl.Size = new System.Drawing.Size(786, 235);
             this.employeePnl.TabIndex = 6;
             // 
+            // userNameTxtBox
+            // 
+            this.userNameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameTxtBox.Location = new System.Drawing.Point(135, 54);
+            this.userNameTxtBox.Name = "userNameTxtBox";
+            this.userNameTxtBox.Size = new System.Drawing.Size(223, 29);
+            this.userNameTxtBox.TabIndex = 9;
+            // 
+            // passwordTxtBox
+            // 
+            this.passwordTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTxtBox.Location = new System.Drawing.Point(135, 164);
+            this.passwordTxtBox.Name = "passwordTxtBox";
+            this.passwordTxtBox.Size = new System.Drawing.Size(223, 29);
+            this.passwordTxtBox.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(439, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 24);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Salary";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 24);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Username";
+            // 
+            // RoleIDComboBox
+            // 
+            this.RoleIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoleIDComboBox.FormattingEnabled = true;
+            this.RoleIDComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"});
+            this.RoleIDComboBox.Location = new System.Drawing.Point(530, 156);
+            this.RoleIDComboBox.Name = "RoleIDComboBox";
+            this.RoleIDComboBox.Size = new System.Drawing.Size(84, 32);
+            this.RoleIDComboBox.TabIndex = 5;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(191, 55);
+            this.label1.Location = new System.Drawing.Point(20, 159);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 24);
+            this.label1.Size = new System.Drawing.Size(92, 24);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Salary";
-            // 
-            // roleidtxtid
-            // 
-            this.roleidtxtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roleidtxtid.Location = new System.Drawing.Point(360, 151);
-            this.roleidtxtid.Name = "roleidtxtid";
-            this.roleidtxtid.Size = new System.Drawing.Size(223, 29);
-            this.roleidtxtid.TabIndex = 5;
+            this.label1.Text = "Password";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(191, 151);
+            this.label2.Location = new System.Drawing.Point(439, 164);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 24);
             this.label2.TabIndex = 3;
@@ -331,7 +398,7 @@
             // salarytxtbox
             // 
             this.salarytxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salarytxtbox.Location = new System.Drawing.Point(360, 50);
+            this.salarytxtbox.Location = new System.Drawing.Point(530, 54);
             this.salarytxtbox.Name = "salarytxtbox";
             this.salarytxtbox.Size = new System.Drawing.Size(223, 29);
             this.salarytxtbox.TabIndex = 4;
@@ -362,13 +429,25 @@
             this.employeeRadio.UseVisualStyleBackColor = true;
             this.employeeRadio.CheckedChanged += new System.EventHandler(this.employeeRadio_CheckedChanged);
             // 
+            // backBtn
+            // 
+            this.backBtn.Location = new System.Drawing.Point(691, 26);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(97, 38);
+            this.backBtn.TabIndex = 17;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label8);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registration";
             this.Text = "Registration";
             this.tabControl1.ResumeLayout(false);
@@ -407,13 +486,18 @@
         private System.Windows.Forms.Label nidlbl;
         private System.Windows.Forms.Panel employeePnl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox roleidtxtid;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox salarytxtbox;
         private System.Windows.Forms.RadioButton customerRario;
         private System.Windows.Forms.RadioButton employeeRadio;
         private System.Windows.Forms.Panel customePnl;
         private System.Windows.Forms.Label accountIDlbl;
         private System.Windows.Forms.TextBox accountIDTxtbox;
+        private System.Windows.Forms.ComboBox RoleIDComboBox;
+        private System.Windows.Forms.TextBox salarytxtbox;
+        private System.Windows.Forms.TextBox userNameTxtBox;
+        private System.Windows.Forms.TextBox passwordTxtBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button backBtn;
     }
 }

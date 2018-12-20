@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.registerbtn = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -50,7 +51,7 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(475, 311);
+            this.loginBtn.Location = new System.Drawing.Point(293, 318);
             this.loginBtn.Margin = new System.Windows.Forms.Padding(2);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(96, 37);
@@ -67,6 +68,7 @@
             this.passwordField.Name = "passwordField";
             this.passwordField.Size = new System.Drawing.Size(200, 24);
             this.passwordField.TabIndex = 9;
+            this.passwordField.TextChanged += new System.EventHandler(this.passwordField_TextChanged);
             // 
             // usernameField
             // 
@@ -101,7 +103,7 @@
             // 
             // registerbtn
             // 
-            this.registerbtn.Location = new System.Drawing.Point(475, 270);
+            this.registerbtn.Location = new System.Drawing.Point(393, 318);
             this.registerbtn.Margin = new System.Windows.Forms.Padding(2);
             this.registerbtn.Name = "registerbtn";
             this.registerbtn.Size = new System.Drawing.Size(96, 37);
@@ -110,11 +112,23 @@
             this.registerbtn.UseVisualStyleBackColor = true;
             this.registerbtn.Click += new System.EventHandler(this.registerbtn_Click);
             // 
+            // exitBtn
+            // 
+            this.exitBtn.Location = new System.Drawing.Point(493, 318);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(96, 37);
+            this.exitBtn.TabIndex = 13;
+            this.exitBtn.Text = "Exit";
+            this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.registerbtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.loginBtn);
@@ -122,6 +136,7 @@
             this.Controls.Add(this.usernameField);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "Form1";
@@ -139,6 +154,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button registerbtn;
+        private System.Windows.Forms.Button exitBtn;
     }
 }
 
