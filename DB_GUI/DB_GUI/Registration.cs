@@ -18,7 +18,7 @@ namespace DB_GUI
 
             string query = "INSERT INTO `bank`.`person` (`national_id`, `person_name`, `birth_date`, `address`, `city`, `phone_number`, `email`) VALUES('"+nidtxtbox.Text+"', '"+nametxtbox.Text+"', '"+ birthdate + "', '"+addtxtbox.Text+"', '"+citytxtbox.Text+"', '"+phoneNotxtbox.Text+"', '"+emailtxtbox.Text+"');";
 
-            db_init.cmd.CommandText = query;
+            DB.cmd.CommandText = query;
 
             db_init.cmd.ExecuteReader();
         }
