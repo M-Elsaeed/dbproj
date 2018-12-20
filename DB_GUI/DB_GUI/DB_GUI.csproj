@@ -49,7 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="db_init.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="DBInit.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

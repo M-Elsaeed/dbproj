@@ -57,7 +57,7 @@ CREATE TABLE department_branch (
         ON UPDATE CASCADE ON DELETE CASCADE
 )  ENGINE=INNODB;
 CREATE TABLE customers (
-	id int,
+    id INT,
     account_id INTEGER PRIMARY KEY,
     CONSTRAINT FOREIGN KEY (id)
         REFERENCES person (national_id)
@@ -164,5 +164,13 @@ CREATE TABLE customer_cards (
     CONSTRAINT FOREIGN KEY (account_id)
         REFERENCES customers (account_id)
         ON UPDATE CASCADE ON DELETE CASCADE
-)  ENGINE=INNODB; 
-#///////////////////////////////////////
+)  ENGINE=INNODB;
+CREATE TABLE empl_accounts (
+    empl_id INT,
+    userName VARCHAR(45),
+    user_password VARCHAR(45),
+    PRIMARY KEY (empl_id , user_password),
+    CONSTRAINT FOREIGN KEY (empl_id)
+        REFERENCES employees (id)
+        ON UPDATE CASCADE ON DELETE CASCADE
+)  ENGINE=INNODB;
