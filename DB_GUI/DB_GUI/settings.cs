@@ -17,17 +17,13 @@ namespace DB_GUI
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void backBtn_Click(object sender, EventArgs e)
         {
-
+            Program.serviceFrom.Show();
+            this.Close();
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void changePasswordLbl_Click(object sender, EventArgs e)
+        private void saveBtn_Click(object sender, EventArgs e)
         {
 
         }

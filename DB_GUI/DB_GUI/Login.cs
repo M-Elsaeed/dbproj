@@ -13,8 +13,6 @@ namespace DB_GUI
 {
     public partial class Login : Form
     {
-        Registration registrationForm = new Registration();
-        services_page serviceForm = new services_page();
 
         public Login()
         {
@@ -23,7 +21,9 @@ namespace DB_GUI
 
         private void registerbtn_Click(object sender, EventArgs e)
         {
-            registrationForm.Show();
+            Program.registrationForm = new Registration();
+            Program.registrationForm.Show();
+            this.Hide();
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -33,8 +33,15 @@ namespace DB_GUI
 
             if (passwordField.Text== Convert.ToString(DBInit.cmd.ExecuteScalar()))
             {
-                serviceForm.Show();
+                Program.serviceFrom = new services_page();
+                Program.serviceFrom.Show();
+                this.Hide();
             }
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

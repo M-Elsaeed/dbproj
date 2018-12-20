@@ -16,5 +16,24 @@ namespace DB_GUI
         {
             InitializeComponent();
         }
+
+        private void transferFundsLbl_Click(object sender, EventArgs e)
+        {
+            Program.transferForm = new Transfer_funds();
+            Program.transferForm.Show();
+            this.Hide();
+        }
+
+        private void settingsLbl_Click(object sender, EventArgs e)
+        {
+            Program.settingForm = new settings();
+            Program.settingForm.Show();
+            this.Hide();
+        }
+
+        private void ExitLbl_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

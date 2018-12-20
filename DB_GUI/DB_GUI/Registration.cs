@@ -59,6 +59,15 @@ namespace DB_GUI
                 accountIDTxtbox.Text= Convert.ToString(DBInit.cmd.ExecuteScalar());
                 MessageBox.Show("Registration Successful");
             }
+
+            Program.loginForm.Show();
+            this.Close();
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Program.loginForm.Show();
+            this.Close();
         }
     }
 }
