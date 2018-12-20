@@ -39,9 +39,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 22);
+            this.label6.Location = new System.Drawing.Point(9, 18);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(216, 55);
+            this.label6.Size = new System.Drawing.Size(174, 44);
             this.label6.TabIndex = 24;
             this.label6.Text = "Services";
             // 
@@ -49,9 +50,10 @@
             // 
             this.withdrawLbl.AutoSize = true;
             this.withdrawLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.withdrawLbl.Location = new System.Drawing.Point(338, 179);
+            this.withdrawLbl.Location = new System.Drawing.Point(254, 145);
+            this.withdrawLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.withdrawLbl.Name = "withdrawLbl";
-            this.withdrawLbl.Size = new System.Drawing.Size(141, 36);
+            this.withdrawLbl.Size = new System.Drawing.Size(113, 29);
             this.withdrawLbl.TabIndex = 26;
             this.withdrawLbl.Text = "Withdraw";
             // 
@@ -59,9 +61,10 @@
             // 
             this.transferFundsLbl.AutoSize = true;
             this.transferFundsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transferFundsLbl.Location = new System.Drawing.Point(306, 106);
+            this.transferFundsLbl.Location = new System.Drawing.Point(230, 86);
+            this.transferFundsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.transferFundsLbl.Name = "transferFundsLbl";
-            this.transferFundsLbl.Size = new System.Drawing.Size(217, 36);
+            this.transferFundsLbl.Size = new System.Drawing.Size(176, 29);
             this.transferFundsLbl.TabIndex = 27;
             this.transferFundsLbl.Text = "Transfer Funds";
             // 
@@ -69,9 +72,10 @@
             // 
             this.depositLbl.AutoSize = true;
             this.depositLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.depositLbl.Location = new System.Drawing.Point(347, 252);
+            this.depositLbl.Location = new System.Drawing.Point(260, 213);
+            this.depositLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.depositLbl.Name = "depositLbl";
-            this.depositLbl.Size = new System.Drawing.Size(116, 36);
+            this.depositLbl.Size = new System.Drawing.Size(96, 29);
             this.depositLbl.TabIndex = 28;
             this.depositLbl.Text = "Deposit";
             // 
@@ -79,22 +83,24 @@
             // 
             this.settingsLbl.AutoSize = true;
             this.settingsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsLbl.Location = new System.Drawing.Point(347, 327);
+            this.settingsLbl.Location = new System.Drawing.Point(260, 271);
+            this.settingsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.settingsLbl.Name = "settingsLbl";
-            this.settingsLbl.Size = new System.Drawing.Size(123, 36);
+            this.settingsLbl.Size = new System.Drawing.Size(100, 29);
             this.settingsLbl.TabIndex = 29;
             this.settingsLbl.Text = "Settings";
             // 
             // services_page
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.settingsLbl);
             this.Controls.Add(this.depositLbl);
             this.Controls.Add(this.transferFundsLbl);
             this.Controls.Add(this.withdrawLbl);
             this.Controls.Add(this.label6);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "services_page";
             this.Text = "services_page";
             this.ResumeLayout(false);
