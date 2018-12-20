@@ -29,7 +29,7 @@ namespace DB_GUI
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            String query = "SELECT user_password FROM bank.empl_accounts WHERE (`userName` = '"+usernameField.Text+"');";
+            String query = "SELECT user_password FROM bank.employees WHERE (`userName` = '" + usernameField.Text+"');";
             DBInit.cmd.CommandText = query;
 
             if (passwordField.Text.Equals(Convert.ToString(DBInit.cmd.ExecuteScalar())))

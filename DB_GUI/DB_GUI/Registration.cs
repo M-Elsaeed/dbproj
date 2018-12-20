@@ -40,11 +40,8 @@ namespace DB_GUI
 
             if (employeeRadio.Checked)
             {
-                string query2 = "INSERT INTO `bank`.`employees` (`id`, `salary`, `role_id`) VALUES ('"+nidtxtbox.Text+"', '"+salarytxtbox.Text+"', '"+RoleIDComboBox.Text+"');";
+                string query2 = "INSERT INTO `bank`.`employees` (`id`, `salary`, `role_id`,`username`, `user_password`) VALUES ('" + nidtxtbox.Text+"', '"+salarytxtbox.Text+"', '"+RoleIDComboBox.Text+ "','" + userNameTxtBox.Text + "', '" + passwordTxtBox.Text + "');";
                 DBInit.cmd.CommandText = query2;
-                DBInit.cmd.ExecuteScalar();
-                string query5 = "INSERT INTO `bank`.`empl_accounts` (`empl_id`, `username`, `user_password`) VALUES ('" + nidtxtbox.Text + "', '"+userNameTxtBox.Text+"', '"+passwordTxtBox.Text+"');";
-                DBInit.cmd.CommandText = query5;
                 DBInit.cmd.ExecuteScalar();
                 MessageBox.Show("Registration Successful");
             }
