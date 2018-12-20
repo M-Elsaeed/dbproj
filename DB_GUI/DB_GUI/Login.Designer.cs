@@ -51,18 +51,19 @@
             // loginBtn
             // 
             this.loginBtn.Location = new System.Drawing.Point(475, 311);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(2);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(96, 37);
             this.loginBtn.TabIndex = 10;
             this.loginBtn.Text = "LOGIN";
             this.loginBtn.UseVisualStyleBackColor = true;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // passwordField
             // 
             this.passwordField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordField.Location = new System.Drawing.Point(168, 244);
-            this.passwordField.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passwordField.Margin = new System.Windows.Forms.Padding(2);
             this.passwordField.Name = "passwordField";
             this.passwordField.Size = new System.Drawing.Size(200, 24);
             this.passwordField.TabIndex = 9;
@@ -71,11 +72,10 @@
             // 
             this.usernameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameField.Location = new System.Drawing.Point(168, 136);
-            this.usernameField.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.usernameField.Margin = new System.Windows.Forms.Padding(2);
             this.usernameField.Name = "usernameField";
             this.usernameField.Size = new System.Drawing.Size(200, 24);
             this.usernameField.TabIndex = 8;
-            this.usernameField.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -108,7 +108,7 @@
             this.registerbtn.TabIndex = 12;
             this.registerbtn.Text = "REGISTER";
             this.registerbtn.UseVisualStyleBackColor = true;
-            this.registerbtn.Click += new System.EventHandler(this.button1_Click);
+            this.registerbtn.Click += new System.EventHandler(this.registerbtn_Click);
             // 
             // Login
             // 
@@ -122,7 +122,7 @@
             this.Controls.Add(this.usernameField);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "Form1";
             this.ResumeLayout(false);

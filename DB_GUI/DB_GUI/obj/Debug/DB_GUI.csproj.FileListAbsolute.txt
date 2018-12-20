@@ -1,6 +1,5 @@
-C:\Users\Youssef Assem\Documents\GitHub\dbproj\DB_GUI\DB_GUI\bin\Debug\DB_GUI.exe.config
 C:\Users\Youssef Assem\Documents\GitHub\dbproj\DB_GUI\DB_GUI\bin\Debug\DB_GUI.exe
-C:\Users\Youssef Assem\Documents\GitHub\dbproj\DB_GUI\DB_GUI\bin\Debug\DB_GUI.pdb
+C:\Users\Youssef Assem\Documents\GitHub\dbproj\DB_GUI\DB_GUI\bin\Debug\DB_GUI.exe.config
 C:\Users\Youssef Assem\Documents\GitHub\dbproj\DB_GUI\DB_GUI\bin\Debug\MySql.Data.dll
 C:\Users\Youssef Assem\Documents\GitHub\dbproj\DB_GUI\DB_GUI\bin\Debug\Google.Protobuf.dll
 C:\Users\Youssef Assem\Documents\GitHub\dbproj\DB_GUI\DB_GUI\bin\Debug\MySql.Data.xml
@@ -16,3 +15,4 @@ C:\Users\Youssef Assem\Documents\GitHub\dbproj\DB_GUI\DB_GUI\obj\Debug\DB_GUI.cs
 C:\Users\Youssef Assem\Documents\GitHub\dbproj\DB_GUI\DB_GUI\obj\Debug\DB_GUI.csproj.CopyComplete
 C:\Users\Youssef Assem\Documents\GitHub\dbproj\DB_GUI\DB_GUI\obj\Debug\DB_GUI.exe
 C:\Users\Youssef Assem\Documents\GitHub\dbproj\DB_GUI\DB_GUI\obj\Debug\DB_GUI.pdb
+C:\Users\Youssef Assem\Documents\GitHub\dbproj\DB_GUI\DB_GUI\bin\Debug\DB_GUI.pdb
