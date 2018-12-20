@@ -5,8 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DB_GUI
+
 {
-    class Class1
+    class Data
     {
+        public int employeeID;
+        public int accountNumber;
+
     }
 }
