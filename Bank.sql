@@ -75,6 +75,8 @@ CREATE TABLE employees (
     id INTEGER PRIMARY KEY,
     salary DOUBLE,
     role_id INTEGER,
+    username varchar(45) UNIQUE,
+	user_password varchar(45),
     CONSTRAINT FOREIGN KEY (id)
         REFERENCES person (national_id)
         ON UPDATE CASCADE ON DELETE CASCADE,
@@ -165,12 +167,5 @@ CREATE TABLE customer_cards (
         REFERENCES customers (account_id)
         ON UPDATE CASCADE ON DELETE CASCADE
 )  ENGINE=INNODB; 
-create table empl_accounts(
-empl_id int,
-userName varchar(45),
-user_password varchar(45),
-primary key(empl_id,user_password),
-constraint foreign key (empl_id) references employees(id)
-        ON UPDATE CASCADE ON DELETE CASCADE
-)  ENGINE=INNODB;
+
 #///////////////////////////////////////
