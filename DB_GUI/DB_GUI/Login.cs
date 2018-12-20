@@ -27,7 +27,7 @@ namespace DB_GUI
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-           String query=
+          // String query=
         }
     }
 }
