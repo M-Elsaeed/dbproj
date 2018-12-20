@@ -76,7 +76,7 @@
             // 
             // registerbtn
             // 
-            this.registerbtn.Location = new System.Drawing.Point(676, 26);
+            this.registerbtn.Location = new System.Drawing.Point(687, 33);
             this.registerbtn.Name = "registerbtn";
             this.registerbtn.Size = new System.Drawing.Size(97, 38);
             this.registerbtn.TabIndex = 15;
@@ -340,7 +340,7 @@
             // 
             this.customerRario.AutoSize = true;
             this.customerRario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerRario.Location = new System.Drawing.Point(477, 37);
+            this.customerRario.Location = new System.Drawing.Point(465, 43);
             this.customerRario.Name = "customerRario";
             this.customerRario.Size = new System.Drawing.Size(109, 28);
             this.customerRario.TabIndex = 1;
@@ -353,7 +353,7 @@
             // 
             this.employeeRadio.AutoSize = true;
             this.employeeRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeRadio.Location = new System.Drawing.Point(170, 37);
+            this.employeeRadio.Location = new System.Drawing.Point(158, 43);
             this.employeeRadio.Name = "employeeRadio";
             this.employeeRadio.Size = new System.Drawing.Size(114, 28);
             this.employeeRadio.TabIndex = 0;

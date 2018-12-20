@@ -16,6 +16,20 @@ namespace DB_GUI
             accountIDTxtbox.Enabled = false;
         }
 
+        private void customerRario_CheckedChanged(object sender, EventArgs e)
+        {
+            customePnl.Show();
+            employeePnl.Hide();
+            registerbtn.Enabled = true;
+        }
+
+        private void employeeRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            employeePnl.Show();
+            customePnl.Hide();
+            registerbtn.Enabled = true;
+        }
+
         private void registerbtn_Click(object sender, EventArgs e)
         {
             string birthdate = birthdaytimepicker.Text;
@@ -32,18 +46,6 @@ namespace DB_GUI
             }
         }
         
-        private void customerRario_CheckedChanged(object sender, EventArgs e)
-        {
-            customePnl.Show();
-            employeePnl.Hide();
-            registerbtn.Enabled = true;
-        }
 
-        private void employeeRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            employeePnl.Show();
-            customePnl.Hide();
-            registerbtn.Enabled = true;
-        }
     }
 }
