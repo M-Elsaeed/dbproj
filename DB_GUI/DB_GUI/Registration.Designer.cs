@@ -350,26 +350,10 @@
             this.RoleIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoleIDComboBox.FormattingEnabled = true;
             this.RoleIDComboBox.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20"});
+            "Manager",
+            "Teller",
+            "Bookkeeper",
+            "Financial Manager"});
             this.RoleIDComboBox.Location = new System.Drawing.Point(530, 156);
             this.RoleIDComboBox.Name = "RoleIDComboBox";
             this.RoleIDComboBox.Size = new System.Drawing.Size(84, 32);
