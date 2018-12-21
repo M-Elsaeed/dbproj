@@ -56,8 +56,9 @@
             this.withdrawLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.withdrawLbl.Name = "withdrawLbl";
             this.withdrawLbl.Size = new System.Drawing.Size(113, 29);
-            this.withdrawLbl.TabIndex = 26;
+            this.withdrawLbl.TabIndex = 3;
             this.withdrawLbl.Text = "Withdraw";
+            this.withdrawLbl.Click += new System.EventHandler(this.withdrawLbl_Click);
             // 
             // transferFundsLbl
             // 
@@ -67,7 +68,7 @@
             this.transferFundsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.transferFundsLbl.Name = "transferFundsLbl";
             this.transferFundsLbl.Size = new System.Drawing.Size(176, 29);
-            this.transferFundsLbl.TabIndex = 27;
+            this.transferFundsLbl.TabIndex = 2;
             this.transferFundsLbl.Text = "Transfer Funds";
             this.transferFundsLbl.Click += new System.EventHandler(this.transferFundsLbl_Click);
             // 
@@ -79,8 +80,9 @@
             this.depositLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.depositLbl.Name = "depositLbl";
             this.depositLbl.Size = new System.Drawing.Size(96, 29);
-            this.depositLbl.TabIndex = 28;
+            this.depositLbl.TabIndex = 4;
             this.depositLbl.Text = "Deposit";
+            this.depositLbl.Click += new System.EventHandler(this.depositLbl_Click);
             // 
             // settingsLbl
             // 
@@ -90,7 +92,7 @@
             this.settingsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.settingsLbl.Name = "settingsLbl";
             this.settingsLbl.Size = new System.Drawing.Size(100, 29);
-            this.settingsLbl.TabIndex = 29;
+            this.settingsLbl.TabIndex = 5;
             this.settingsLbl.Text = "Settings";
             this.settingsLbl.Click += new System.EventHandler(this.settingsLbl_Click);
             // 
@@ -101,8 +103,9 @@
             this.openAccountLbl.Location = new System.Drawing.Point(162, 72);
             this.openAccountLbl.Name = "openAccountLbl";
             this.openAccountLbl.Size = new System.Drawing.Size(279, 29);
-            this.openAccountLbl.TabIndex = 31;
+            this.openAccountLbl.TabIndex = 1;
             this.openAccountLbl.Text = "Open a new sub-account";
+            this.openAccountLbl.Click += new System.EventHandler(this.openAccountLbl_Click);
             // 
             // ExitLbl
             // 
@@ -112,7 +115,7 @@
             this.ExitLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ExitLbl.Name = "ExitLbl";
             this.ExitLbl.Size = new System.Drawing.Size(52, 29);
-            this.ExitLbl.TabIndex = 32;
+            this.ExitLbl.TabIndex = 6;
             this.ExitLbl.Text = "Exit";
             this.ExitLbl.Click += new System.EventHandler(this.ExitLbl_Click);
             // 

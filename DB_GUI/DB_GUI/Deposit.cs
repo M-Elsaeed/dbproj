@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DB_GUI
 {
-    public partial class settings : Form
+    public partial class Deposit : Form
     {
-        public settings()
+        public Deposit()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace DB_GUI
             this.Close();
         }
 
-        private void saveBtn_Click(object sender, EventArgs e)
+        private void depositBtn_Click(object sender, EventArgs e)
         {
             //Functional code
             Program.serviceFrom.Show();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DB_GUI
 {
-    public partial class settings : Form
+    public partial class Withdraw : Form
     {
-        public settings()
+        public Withdraw()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace DB_GUI
             this.Close();
         }
 
-        private void saveBtn_Click(object sender, EventArgs e)
+        private void withdrawBtn_Click(object sender, EventArgs e)
         {
             //Functional code
             Program.serviceFrom.Show();

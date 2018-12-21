@@ -10,6 +10,10 @@ namespace DB_GUI
         public static services_page serviceFrom;
         public static Transfer_funds transferForm;
         public static settings settingForm;
+        public static Withdraw withdrawForm;
+        public static Deposit depositForm;
+        public static OpenNewSubAccount openNewAccountForm;
+
         [STAThread]
 
         static void Main()

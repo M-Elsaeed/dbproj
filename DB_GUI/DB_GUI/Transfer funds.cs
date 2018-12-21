@@ -39,12 +39,13 @@ namespace DB_GUI
                     "VALUES(" + "'" + frAcc + "','" + frSubAcc + "','" + toAcc + "','" + toSubAcc + "','" + amount + "','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "')";
                 MySqlDataReader reader = DBInit.cmd.ExecuteReader();
                 MessageBox.Show("Transaction was successful");
+                Program.serviceFrom.Show();
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Please fill form fields");
             }
-
         }
 
         private void backBtn_Click(object sender, EventArgs e)

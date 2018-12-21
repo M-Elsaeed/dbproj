@@ -35,5 +35,26 @@ namespace DB_GUI
         {
             Application.Exit();
         }
+
+        private void withdrawLbl_Click(object sender, EventArgs e)
+        {
+            Program.withdrawForm = new Withdraw();
+            Program.withdrawForm.Show();
+            this.Hide();
+        }
+
+        private void openAccountLbl_Click(object sender, EventArgs e)
+        {
+            Program.openNewAccountForm = new OpenNewSubAccount();
+            Program.openNewAccountForm.Show();
+            this.Hide();
+        }
+
+        private void depositLbl_Click(object sender, EventArgs e)
+        {
+            Program.depositForm = new Deposit();
+            Program.depositForm.Show();
+            this.Hide();
+        }
     }
 }

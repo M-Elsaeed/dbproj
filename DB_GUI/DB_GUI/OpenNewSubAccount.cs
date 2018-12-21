@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DB_GUI
 {
-    public partial class settings : Form
+    public partial class OpenNewSubAccount : Form
     {
-        public settings()
+        public OpenNewSubAccount()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace DB_GUI
             this.Close();
         }
 
-        private void saveBtn_Click(object sender, EventArgs e)
+        private void doneBtn_Click(object sender, EventArgs e)
         {
             //Functional code
             Program.serviceFrom.Show();
