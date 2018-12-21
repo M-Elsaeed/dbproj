@@ -35,6 +35,7 @@
             this.settingsLbl = new System.Windows.Forms.Label();
             this.openAccountLbl = new System.Windows.Forms.Label();
             this.ExitLbl = new System.Windows.Forms.Label();
+            this.EmployeeTypeLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
@@ -119,11 +120,21 @@
             this.ExitLbl.Text = "Exit";
             this.ExitLbl.Click += new System.EventHandler(this.ExitLbl_Click);
             // 
+            // EmployeeTypeLbl
+            // 
+            this.EmployeeTypeLbl.AutoSize = true;
+            this.EmployeeTypeLbl.ForeColor = System.Drawing.Color.Red;
+            this.EmployeeTypeLbl.Location = new System.Drawing.Point(535, 9);
+            this.EmployeeTypeLbl.Name = "EmployeeTypeLbl";
+            this.EmployeeTypeLbl.Size = new System.Drawing.Size(0, 13);
+            this.EmployeeTypeLbl.TabIndex = 25;
+            // 
             // services_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.EmployeeTypeLbl);
             this.Controls.Add(this.ExitLbl);
             this.Controls.Add(this.openAccountLbl);
             this.Controls.Add(this.settingsLbl);
@@ -149,5 +160,6 @@
         private System.Windows.Forms.Label settingsLbl;
         private System.Windows.Forms.Label openAccountLbl;
         private System.Windows.Forms.Label ExitLbl;
+        private System.Windows.Forms.Label EmployeeTypeLbl;
     }
 }

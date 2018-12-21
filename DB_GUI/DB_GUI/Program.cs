@@ -14,6 +14,8 @@ namespace DB_GUI
         public static Deposit depositForm;
         public static OpenNewSubAccount openNewAccountForm;
 
+        public static int RoleID;
+
         [STAThread]
 
         static void Main()

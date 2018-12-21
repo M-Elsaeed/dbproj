@@ -15,6 +15,36 @@ namespace DB_GUI
         public services_page()
         {
             InitializeComponent();
+            switch (Program.RoleID+1)
+            {
+                case 1:
+                    EmployeeTypeLbl.Text = "Manager";
+                    openAccountLbl.Enabled = false;
+                    transferFundsLbl.Enabled = false;
+                    withdrawLbl.Enabled = false;
+                    depositLbl.Enabled = false;
+                    break;
+                case 2:
+                    Console.WriteLine("Teller");
+                    openAccountLbl.Enabled = false;
+                    transferFundsLbl.Enabled = false;
+                    settingsLbl.Enabled = false;
+                    break;
+                case 3:
+                    Console.WriteLine("Bookkeeper");
+                    openAccountLbl.Enabled = false;
+                    withdrawLbl.Enabled = false;
+                    depositLbl.Enabled = false;
+                    settingsLbl.Enabled = false;
+                    break;
+                case 4:
+                    Console.WriteLine("Financial Manager");
+                    transferFundsLbl.Enabled = false;
+                    withdrawLbl.Enabled = false;
+                    depositLbl.Enabled = false;
+                    settingsLbl.Enabled = false;
+                    break;
+            }
         }
 
         private void transferFundsLbl_Click(object sender, EventArgs e)
