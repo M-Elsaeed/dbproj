@@ -25,7 +25,10 @@ namespace DB_GUI
 
         private void doneBtn_Click(object sender, EventArgs e)
         {
-            //Functional code
+            string query1 = "INSERT INTO `bank`.`accounts_sub_accounts` (`account_id`, `subaccount_id`, `currency_id`, `balance`) VALUES('" + AccountIDTxtBox.Text + "', '" + (AccountTypeComboBox.SelectedIndex + 1) + "', '" + (CurrencyComboBox.SelectedIndex + 1) + "', '200');";
+            DBInit.cmd.CommandText = query1;
+            DBInit.cmd.ExecuteScalar();
+
             Program.serviceFrom.Show();
             this.Close();
         }

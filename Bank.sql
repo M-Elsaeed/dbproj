@@ -86,7 +86,7 @@ CREATE TABLE employees (
 )  ENGINE=INNODB;
 CREATE TABLE accounts_sub_accounts (
     account_id INTEGER,
-    subaccount_id INTEGER,
+    subaccount_id INTEGER AUTO_INCREMENT,
     currency_id INTEGER,
     balance DOUBLE,
     PRIMARY KEY (account_id , subaccount_id , currency_id),
