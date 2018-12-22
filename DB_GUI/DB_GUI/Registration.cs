@@ -6,6 +6,8 @@ namespace DB_GUI
 {
     public partial class Registration : Form
     {
+        bool wrong=true;
+
         public Registration()
         {
             InitializeComponent();
@@ -34,18 +36,39 @@ namespace DB_GUI
         {
             string birthdate = birthdaytimepicker.Text;
 
-            string query1 = "INSERT INTO `bank`.`person` (`national_id`, `person_name`, `birth_date`, `address`, `city`, `phone_number`, `email`) VALUES('" + nidtxtbox.Text + "', '" + nametxtbox.Text + "', '" + birthdate + "', '" + addtxtbox.Text + "', '" + citytxtbox.Text + "', '" + phoneNotxtbox.Text + "', '" + emailtxtbox.Text + "');";
-            DBInit.cmd.CommandText = query1;
-            DBInit.cmd.ExecuteScalar();
-
-            if (employeeRadio.Checked)
+            try
             {
-                string query2 = "INSERT INTO `bank`.`employees` (`id`, `salary`, `role_id`,`username`, `user_password`) VALUES ('" + nidtxtbox.Text+"', '"+salarytxtbox.Text+"', '"+(RoleIDComboBox.SelectedIndex+1)+ "','" + userNameTxtBox.Text + "', '" + passwordTxtBox.Text + "');";
-                DBInit.cmd.CommandText = query2;
+                string query1 = "INSERT INTO `bank`.`person` (`national_id`, `person_name`, `birth_date`, `address`, `city`, `phone_number`, `email`) VALUES('" + nidtxtbox.Text + "', '" + nametxtbox.Text + "', '" + birthdate + "', '" + addtxtbox.Text + "', '" + citytxtbox.Text + "', '" + phoneNotxtbox.Text + "', '" + emailtxtbox.Text + "');";
+                DBInit.cmd.CommandText = query1;
                 DBInit.cmd.ExecuteScalar();
-                MessageBox.Show("Registration Successful");
             }
-            else if (customerRario.Checked)
+            catch (Exception)
+            {
+                MessageBox.Show("Registration Failed , Please re-entrer National ID as an account is already existing with this ID");
+                wrong = false;
+            }
+            
+            if (employeeRadio.Checked && wrong == true)
+            {
+                try
+                {
+                    string query2 = "INSERT INTO `bank`.`employees` (`id`, `salary`, `role_id`,`username`, `user_password`) VALUES ('" + nidtxtbox.Text + "', '" + salarytxtbox.Text + "', '" + (RoleIDComboBox.SelectedIndex + 1) + "','" + userNameTxtBox.Text + "', '" + passwordTxtBox.Text + "');";
+                    DBInit.cmd.CommandText = query2;
+                    DBInit.cmd.ExecuteScalar();
+                    MessageBox.Show("Registration Successful");
+                    Program.loginForm.Show();
+                    this.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Registration Failed , Username is used");
+                    string query5 = "DELETE FROM `bank`.`person` WHERE (`national_id` = '" + nidtxtbox.Text + "');";
+                    DBInit.cmd.CommandText = query5;
+                    DBInit.cmd.ExecuteScalar();
+                }
+            }
+
+            else if (customerRario.Checked && wrong == true)
             {
                 string query3 = "INSERT INTO `bank`.`customers` (`id`) VALUES ('"+nidtxtbox.Text+"');";
                 DBInit.cmd.CommandText = query3;
@@ -54,11 +77,9 @@ namespace DB_GUI
                 string query4 = "SELECT account_id FROM bank.customers WHERE id = " + nidtxtbox.Text + ";";
                 DBInit.cmd.CommandText = query4;
                 accountIDTxtbox.Text= Convert.ToString(DBInit.cmd.ExecuteScalar());
+
                 MessageBox.Show("Registration Successful");
             }
-
-            Program.loginForm.Show();
-            this.Close();
         }
 
         private void backBtn_Click(object sender, EventArgs e)

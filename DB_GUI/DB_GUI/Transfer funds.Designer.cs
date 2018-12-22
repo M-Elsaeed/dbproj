@@ -33,7 +33,7 @@
             this.toAccountField = new System.Windows.Forms.TextBox();
             this.amountField = new System.Windows.Forms.TextBox();
             this.fromAccountField = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.authorizeLbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -96,16 +96,16 @@
             this.fromAccountField.Size = new System.Drawing.Size(159, 24);
             this.fromAccountField.TabIndex = 18;
             // 
-            // label4
+            // authorizeLbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(391, 270);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(191, 18);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Authorization code : ######";
+            this.authorizeLbl.AutoSize = true;
+            this.authorizeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.authorizeLbl.Location = new System.Drawing.Point(391, 270);
+            this.authorizeLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.authorizeLbl.Name = "authorizeLbl";
+            this.authorizeLbl.Size = new System.Drawing.Size(191, 18);
+            this.authorizeLbl.TabIndex = 16;
+            this.authorizeLbl.Text = "Authorization code : ######";
             // 
             // label3
             // 
@@ -150,7 +150,6 @@
             this.label7.Size = new System.Drawing.Size(62, 18);
             this.label7.TabIndex = 25;
             this.label7.Text = "Account";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -231,7 +230,7 @@
             this.Controls.Add(this.toAccountField);
             this.Controls.Add(this.amountField);
             this.Controls.Add(this.fromAccountField);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.authorizeLbl);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -251,7 +250,7 @@
         private System.Windows.Forms.TextBox toAccountField;
         private System.Windows.Forms.TextBox amountField;
         private System.Windows.Forms.TextBox fromAccountField;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label authorizeLbl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

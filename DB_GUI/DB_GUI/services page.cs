@@ -15,12 +15,14 @@ namespace DB_GUI
         public services_page()
         {
             InitializeComponent();
-            switch (Program.RoleID+1)
+            MessageBox.Show(Program.RoleID + "");
+            switch (Program.RoleID)
             {
                 case 1:
                     EmployeeTypeLbl.Text = "Manager";
                     openAccountLbl.Enabled = false;
                     transferFundsLbl.Enabled = false;
+                    IssuecardLbl.Enabled = false;
                     withdrawLbl.Enabled = false;
                     depositLbl.Enabled = false;
                     break;
@@ -28,11 +30,13 @@ namespace DB_GUI
                     Console.WriteLine("Teller");
                     openAccountLbl.Enabled = false;
                     transferFundsLbl.Enabled = false;
+                    IssuecardLbl.Enabled = false;
                     settingsLbl.Enabled = false;
                     break;
                 case 3:
                     Console.WriteLine("Bookkeeper");
                     openAccountLbl.Enabled = false;
+                    IssuecardLbl.Enabled = false;
                     withdrawLbl.Enabled = false;
                     depositLbl.Enabled = false;
                     settingsLbl.Enabled = false;
@@ -84,6 +88,13 @@ namespace DB_GUI
         {
             Program.depositForm = new Deposit();
             Program.depositForm.Show();
+            this.Hide();
+        }
+
+        private void IssuecardLbl_Click(object sender, EventArgs e)
+        {
+            Program.IssueCardForm = new IssueCard();
+            Program.IssueCardForm.Show();
             this.Hide();
         }
     }

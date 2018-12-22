@@ -271,9 +271,9 @@
             // 
             this.customePnl.Controls.Add(this.accountIDTxtbox);
             this.customePnl.Controls.Add(this.accountIDlbl);
-            this.customePnl.Location = new System.Drawing.Point(0, 328);
+            this.customePnl.Location = new System.Drawing.Point(0, 110);
             this.customePnl.Name = "customePnl";
-            this.customePnl.Size = new System.Drawing.Size(796, 19);
+            this.customePnl.Size = new System.Drawing.Size(796, 237);
             this.customePnl.TabIndex = 16;
             // 
             // accountIDTxtbox
@@ -304,9 +304,9 @@
             this.employeePnl.Controls.Add(this.label1);
             this.employeePnl.Controls.Add(this.label2);
             this.employeePnl.Controls.Add(this.salarytxtbox);
-            this.employeePnl.Location = new System.Drawing.Point(3, 105);
+            this.employeePnl.Location = new System.Drawing.Point(3, 110);
             this.employeePnl.Name = "employeePnl";
-            this.employeePnl.Size = new System.Drawing.Size(786, 235);
+            this.employeePnl.Size = new System.Drawing.Size(786, 230);
             this.employeePnl.TabIndex = 6;
             // 
             // userNameTxtBox
@@ -395,7 +395,6 @@
             this.customerRario.Name = "customerRario";
             this.customerRario.Size = new System.Drawing.Size(109, 28);
             this.customerRario.TabIndex = 1;
-            this.customerRario.TabStop = true;
             this.customerRario.Text = "Customer";
             this.customerRario.UseVisualStyleBackColor = true;
             this.customerRario.CheckedChanged += new System.EventHandler(this.customerRario_CheckedChanged);
@@ -403,6 +402,7 @@
             // employeeRadio
             // 
             this.employeeRadio.AutoSize = true;
+            this.employeeRadio.Checked = true;
             this.employeeRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeRadio.Location = new System.Drawing.Point(158, 43);
             this.employeeRadio.Name = "employeeRadio";

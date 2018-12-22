@@ -36,6 +36,7 @@
             this.openAccountLbl = new System.Windows.Forms.Label();
             this.ExitLbl = new System.Windows.Forms.Label();
             this.EmployeeTypeLbl = new System.Windows.Forms.Label();
+            this.IssuecardLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
@@ -53,7 +54,7 @@
             // 
             this.withdrawLbl.AutoSize = true;
             this.withdrawLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.withdrawLbl.Location = new System.Drawing.Point(241, 184);
+            this.withdrawLbl.Location = new System.Drawing.Point(238, 213);
             this.withdrawLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.withdrawLbl.Name = "withdrawLbl";
             this.withdrawLbl.Size = new System.Drawing.Size(88, 22);
@@ -65,7 +66,7 @@
             // 
             this.transferFundsLbl.AutoSize = true;
             this.transferFundsLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transferFundsLbl.Location = new System.Drawing.Point(215, 140);
+            this.transferFundsLbl.Location = new System.Drawing.Point(218, 130);
             this.transferFundsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.transferFundsLbl.Name = "transferFundsLbl";
             this.transferFundsLbl.Size = new System.Drawing.Size(138, 22);
@@ -77,7 +78,7 @@
             // 
             this.depositLbl.AutoSize = true;
             this.depositLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.depositLbl.Location = new System.Drawing.Point(250, 233);
+            this.depositLbl.Location = new System.Drawing.Point(247, 254);
             this.depositLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.depositLbl.Name = "depositLbl";
             this.depositLbl.Size = new System.Drawing.Size(76, 22);
@@ -89,7 +90,7 @@
             // 
             this.settingsLbl.AutoSize = true;
             this.settingsLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsLbl.Location = new System.Drawing.Point(250, 282);
+            this.settingsLbl.Location = new System.Drawing.Point(247, 294);
             this.settingsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.settingsLbl.Name = "settingsLbl";
             this.settingsLbl.Size = new System.Drawing.Size(79, 22);
@@ -101,7 +102,7 @@
             // 
             this.openAccountLbl.AutoSize = true;
             this.openAccountLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openAccountLbl.Location = new System.Drawing.Point(174, 96);
+            this.openAccountLbl.Location = new System.Drawing.Point(177, 87);
             this.openAccountLbl.Name = "openAccountLbl";
             this.openAccountLbl.Size = new System.Drawing.Size(219, 22);
             this.openAccountLbl.TabIndex = 1;
@@ -112,7 +113,7 @@
             // 
             this.ExitLbl.AutoSize = true;
             this.ExitLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitLbl.Location = new System.Drawing.Point(271, 328);
+            this.ExitLbl.Location = new System.Drawing.Point(265, 335);
             this.ExitLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ExitLbl.Name = "ExitLbl";
             this.ExitLbl.Size = new System.Drawing.Size(41, 22);
@@ -129,11 +130,23 @@
             this.EmployeeTypeLbl.Size = new System.Drawing.Size(0, 13);
             this.EmployeeTypeLbl.TabIndex = 25;
             // 
+            // IssuecardLbl
+            // 
+            this.IssuecardLbl.AutoSize = true;
+            this.IssuecardLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IssuecardLbl.Location = new System.Drawing.Point(227, 171);
+            this.IssuecardLbl.Name = "IssuecardLbl";
+            this.IssuecardLbl.Size = new System.Drawing.Size(114, 22);
+            this.IssuecardLbl.TabIndex = 26;
+            this.IssuecardLbl.Text = "Issue a card";
+            this.IssuecardLbl.Click += new System.EventHandler(this.IssuecardLbl_Click);
+            // 
             // services_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.IssuecardLbl);
             this.Controls.Add(this.EmployeeTypeLbl);
             this.Controls.Add(this.ExitLbl);
             this.Controls.Add(this.openAccountLbl);
@@ -161,5 +174,6 @@
         private System.Windows.Forms.Label openAccountLbl;
         private System.Windows.Forms.Label ExitLbl;
         private System.Windows.Forms.Label EmployeeTypeLbl;
+        private System.Windows.Forms.Label IssuecardLbl;
     }
 }

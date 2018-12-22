@@ -13,8 +13,9 @@ namespace DB_GUI
         public static Withdraw withdrawForm;
         public static Deposit depositForm;
         public static OpenNewSubAccount openNewAccountForm;
+        public static IssueCard IssueCardForm;
 
-        public static int RoleID;
+        public static int RoleID=0;
 
         [STAThread]
 

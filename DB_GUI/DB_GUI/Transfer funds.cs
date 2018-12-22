@@ -17,11 +17,14 @@ namespace DB_GUI
         public Transfer_funds()
         {
             InitializeComponent();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
+            string authorizationCode="";
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            Random rnd = new Random();
+            for (int i = 0; i < 6; i++)
+            {
+                authorizationCode = authorizationCode + chars[rnd.Next(0, 35)];
+            }
+            authorizeLbl.Text = "Authorization code : " + authorizationCode;
         }
 
         private void transferBtn_Click(object sender, EventArgs e)

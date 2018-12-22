@@ -79,7 +79,7 @@ INSERT INTO `bank`.`department_branch` (`branch_swift`, `dept_id`) VALUES ('GZAE
 INSERT INTO `bank`.`department_branch` (`branch_swift`, `dept_id`) VALUES ('GZAEGP', '2');
 INSERT INTO `bank`.`department_branch` (`branch_swift`, `dept_id`) VALUES ('GZAEGP', '3');
 
-INSERT INTO `bank`.`roles` (`id`, `r_name`, `dept_id`) VALUES ('21', 'Manager', '3');
-INSERT INTO `bank`.`roles` (`id`, `r_name`, `dept_id`) VALUES ('22', 'Teller', '1');
-INSERT INTO `bank`.`roles` (`id`, `r_name`, `dept_id`) VALUES ('23', 'Bookkeeper', '1');
-INSERT INTO `bank`.`roles` (`id`, `r_name`, `dept_id`) VALUES ('24', 'Financial Manager', '2');
+INSERT INTO `bank`.`roles` (`id`, `r_name`, `dept_id`) VALUES ('1', 'Manager', '3');
+INSERT INTO `bank`.`roles` (`id`, `r_name`, `dept_id`) VALUES ('2', 'Teller', '1');
+INSERT INTO `bank`.`roles` (`id`, `r_name`, `dept_id`) VALUES ('3', 'Bookkeeper', '1');
+INSERT INTO `bank`.`roles` (`id`, `r_name`, `dept_id`) VALUES ('4', 'Financial Manager', '2');

@@ -152,13 +152,13 @@ CREATE TABLE branch_transaction (
         ON UPDATE CASCADE ON DELETE CASCADE
 )  ENGINE=INNODB;
 CREATE TABLE customer_cards (
-    cnumber VARCHAR(16) PRIMARY KEY,
+    card_number INTEGER PRIMARY KEY AUTO_INCREMENT,
     account_id INTEGER,
     issuer_id INT,
     issue_date DATE,
     expirey_date DATE,
     daily_limit DOUBLE,
-    ctype ENUM('debit', 'credit'),
+    card_type ENUM('debit', 'credit'),
     CVV VARCHAR(3),
     CONSTRAINT FOREIGN KEY (issuer_id)
         REFERENCES issuers (id)
