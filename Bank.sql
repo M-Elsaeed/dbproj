@@ -54,7 +54,8 @@ CREATE TABLE department_branch (
         ON UPDATE CASCADE ON DELETE CASCADE,
     CONSTRAINT FOREIGN KEY (branch_SWIFT)
         REFERENCES branches (SWIFT)
-        ON UPDATE CASCADE ON DELETE CASCADE
+        ON UPDATE CASCADE ON DELETE CASCADE,
+        PRIMARY KEY(branch_swift,dept_id)
 )  ENGINE=INNODB;
 CREATE TABLE customers (
 	id int,
@@ -110,7 +111,7 @@ CREATE TABLE payroll (
         REFERENCES employees (id)
         ON UPDATE CASCADE ON DELETE CASCADE
 )  ENGINE=INNODB;
-CREATE TABLE transactions (
+create TABLE transactions (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     from_account INTEGER,
     from_subAccount INTEGER,
@@ -118,17 +119,11 @@ CREATE TABLE transactions (
     to_subAccount INTEGER,
     amount DOUBLE,
     t_time DATETIME,
-    CONSTRAINT FOREIGN KEY (from_account)
-        REFERENCES accounts_sub_accounts (account_id)
+    CONSTRAINT FOREIGN KEY (from_account,from_subaccount)
+        REFERENCES accounts_sub_accounts (account_id,subaccount_id)
         ON UPDATE CASCADE ON DELETE CASCADE,
-    CONSTRAINT FOREIGN KEY (to_account)
-        REFERENCES accounts_sub_accounts (account_id)
-        ON UPDATE CASCADE ON DELETE CASCADE,
-    CONSTRAINT FOREIGN KEY (from_subAccount)
-        REFERENCES accounts_sub_accounts (subaccount_id)
-        ON UPDATE CASCADE ON DELETE CASCADE,
-    CONSTRAINT FOREIGN KEY (to_subAccount)
-        REFERENCES accounts_sub_accounts (subaccount_id)
+    CONSTRAINT FOREIGN KEY (to_account,to_subAccount)
+        REFERENCES accounts_sub_accounts (account_id,subaccount_id)
         ON UPDATE CASCADE ON DELETE CASCADE
 )  ENGINE=INNODB;
 CREATE TABLE atm_transaction (
@@ -139,7 +134,8 @@ CREATE TABLE atm_transaction (
         ON UPDATE CASCADE ON DELETE CASCADE,
     CONSTRAINT FOREIGN KEY (transaction_id)
         REFERENCES transactions (id)
-        ON UPDATE CASCADE ON DELETE CASCADE
+        ON UPDATE CASCADE ON DELETE CASCADE,
+        PRIMARY KEY(atm_id,transaction_id)
 )  ENGINE=INNODB;
 CREATE TABLE branch_transaction (
     branch_swift VARCHAR(11),
@@ -149,7 +145,8 @@ CREATE TABLE branch_transaction (
         ON UPDATE CASCADE ON DELETE CASCADE,
     CONSTRAINT FOREIGN KEY (transaction_id)
         REFERENCES transactions (id)
-        ON UPDATE CASCADE ON DELETE CASCADE
+        ON UPDATE CASCADE ON DELETE CASCADE,
+        PRIMARY KEY(branch_swift,transaction_id)
 )  ENGINE=INNODB;
 CREATE TABLE customer_cards (
     card_number INTEGER PRIMARY KEY AUTO_INCREMENT,
