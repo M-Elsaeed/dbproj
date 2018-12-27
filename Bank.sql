@@ -1,4 +1,4 @@
-drop database BANK;
+drop database if exists BANK;
 create database BANK;
 use BANK;
 CREATE TABLE person (
