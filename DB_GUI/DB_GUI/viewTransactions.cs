@@ -29,11 +29,11 @@ namespace DB_GUI
             int minAmount = minAmountField.Text == "" ? 0 : Int32.Parse(minAmountField.Text);
             int maxAmount = maxAmountField.Text == "" ? Int32.MaxValue : Int32.Parse(maxAmountField.Text);
 
-            DBInit.cmd.CommandText = "SELECT national_id, person_name, from_account, to_account, amount FROM person INNER JOIN customers ON person.national_id = customers.id INNER JOIN(SELECT * FROM transactions AS Tfrom WHERE Tfrom.id IN (SELECT transaction_id FROM branch_transaction WHERE branch_transaction.transaction_id IN ( SELECT SWIFT FROM branches " +
+            DBInit.cmd.CommandText = "SELECT national_id, person_name, from_account, to_account, amount FROM (person INNER JOIN customers ON person.national_id = customers.id INNER JOIN(SELECT * FROM transactions AS Tfrom WHERE Tfrom.id IN (SELECT transaction_id FROM branch_transaction WHERE branch_transaction.transaction_id IN ( SELECT SWIFT FROM branches " +
                 "WHERE b_name LIKE \"" +
                 frBranch +
                 "\") ) )" +
-                "as T " +
+                "as T ON T.from_account = customers.account_id) " +
                 "where amount >=" +
                 minAmount +
                 " and " +
