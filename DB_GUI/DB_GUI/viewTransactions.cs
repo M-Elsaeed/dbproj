@@ -16,10 +16,12 @@ namespace DB_GUI
         public ViewTransaction()
         {
             InitializeComponent();
+            panel1.Hide();
         }
 
         private void transferBtn_Click(object sender, EventArgs e)
         {
+            panel1.Show();
             DBInit.cmd.CommandText = "";
             string frBranch = fromBranchField.Text;
             string sort = sortDrop.Text;
@@ -27,13 +29,17 @@ namespace DB_GUI
             int minAmount = minAmountField.Text == "" ? 0 : Int32.Parse(minAmountField.Text);
             int maxAmount = maxAmountField.Text == "" ? Int32.MaxValue : Int32.Parse(maxAmountField.Text);
 
-            DBInit.cmd.CommandText = "SELECT national_id, person_name, from_account, to_account, amount FROM person INNER JOIN customers ON person.national_id = customers.id INNER JOIN(SELECT * FROM transactions AS Tfrom WHERE Tfrom.id IN (SELECT transaction_id FROM branch_transaction WHERE branch_transaction.transaction_id IN ( SELECT SWIFT FROM branches WHERE b_name LIKE \"" +
+            DBInit.cmd.CommandText = "SELECT national_id, person_name, from_account, to_account, amount FROM person INNER JOIN customers ON person.national_id = customers.id INNER JOIN(SELECT * FROM transactions AS Tfrom WHERE Tfrom.id IN (SELECT transaction_id FROM branch_transaction WHERE branch_transaction.transaction_id IN ( SELECT SWIFT FROM branches " +
+                "WHERE b_name LIKE \"" +
                 frBranch +
-                "\") ) )as T where amount >=" +
+                "\") ) )" +
+                "as T " +
+                "where amount >=" +
                 minAmount +
                 " and " +
                 "amount<=" +
-                maxAmount;
+                maxAmount
+                ;
             if (sort != "")
             {
                 if (sort == "Customer Name")
@@ -57,9 +63,18 @@ namespace DB_GUI
 
             if (!(frBranch == ""))
             {
-
                 MySqlDataReader reader = DBInit.cmd.ExecuteReader();
-                MessageBox.Show("Query successful");
+                while (reader.Read())
+                {
+                    //national_id, person_name, from_account, to_account, amount
+                    resultsText.Text += "National ID : " + reader["national_id"].ToString();
+                    resultsText.Text += " | Person Name : " + reader["person_name"].ToString();
+                    resultsText.Text += " | From Account : " + reader["from_account"].ToString();
+                    resultsText.Text += " | To Account : " + reader["to_account"].ToString();
+                    resultsText.Text += " | Amount : " + reader["amount"].ToString();
+                    resultsText.Text += "\n";
+
+                }
                 reader.Close();
             }
             else
@@ -108,6 +123,12 @@ namespace DB_GUI
         private void viewTransactions_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
+            resultsText.Text = "";
         }
     }
 }

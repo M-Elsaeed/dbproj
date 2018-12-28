@@ -47,6 +47,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.sortDrop = new System.Windows.Forms.ComboBox();
             this.sortDirDrop = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.resultsText = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // backBtn
@@ -246,11 +250,40 @@
             this.sortDirDrop.TabIndex = 61;
             this.sortDirDrop.SelectedIndexChanged += new System.EventHandler(this.sortDirDrop_SelectedIndexChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.resultsText);
+            this.panel1.Location = new System.Drawing.Point(13, 9);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(921, 554);
+            this.panel1.TabIndex = 62;
+            // 
+            // resultsText
+            // 
+            this.resultsText.Location = new System.Drawing.Point(4, 4);
+            this.resultsText.Name = "resultsText";
+            this.resultsText.ReadOnly = true;
+            this.resultsText.Size = new System.Drawing.Size(914, 483);
+            this.resultsText.TabIndex = 0;
+            this.resultsText.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(383, 493);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 57);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ViewTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 575);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.sortDirDrop);
             this.Controls.Add(this.sortDrop);
             this.Controls.Add(this.label14);
@@ -274,6 +307,7 @@
             this.Name = "ViewTransaction";
             this.Text = "ViewTransaction";
             this.Load += new System.EventHandler(this.viewTransactions_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,5 +334,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox sortDrop;
         private System.Windows.Forms.ComboBox sortDirDrop;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RichTextBox resultsText;
+        private System.Windows.Forms.Button button1;
     }
 }
