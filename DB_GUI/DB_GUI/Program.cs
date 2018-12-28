@@ -15,7 +15,7 @@ namespace DB_GUI
         public static OpenNewSubAccount openNewAccountForm;
         public static IssueCard IssueCardForm;
 
-        public static int RoleID=0;
+        public static int RoleID = 0;
 
         [STAThread]
 

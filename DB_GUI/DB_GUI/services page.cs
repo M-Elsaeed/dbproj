@@ -15,7 +15,6 @@ namespace DB_GUI
         public services_page()
         {
             InitializeComponent();
-            MessageBox.Show(Program.RoleID + "");
             switch (Program.RoleID)
             {
                 case 1:
@@ -27,14 +26,14 @@ namespace DB_GUI
                     depositLbl.Enabled = false;
                     break;
                 case 2:
-                    Console.WriteLine("Teller");
+                    EmployeeTypeLbl.Text = "Teller";
                     openAccountLbl.Enabled = false;
                     transferFundsLbl.Enabled = false;
                     IssuecardLbl.Enabled = false;
                     settingsLbl.Enabled = false;
                     break;
                 case 3:
-                    Console.WriteLine("Bookkeeper");
+                    EmployeeTypeLbl.Text = "Bookkeeper";
                     openAccountLbl.Enabled = false;
                     IssuecardLbl.Enabled = false;
                     withdrawLbl.Enabled = false;
@@ -42,7 +41,7 @@ namespace DB_GUI
                     settingsLbl.Enabled = false;
                     break;
                 case 4:
-                    Console.WriteLine("Financial Manager");
+                    EmployeeTypeLbl.Text = "Financial Manager";
                     transferFundsLbl.Enabled = false;
                     withdrawLbl.Enabled = false;
                     depositLbl.Enabled = false;

@@ -125,7 +125,7 @@
             // 
             this.EmployeeTypeLbl.AutoSize = true;
             this.EmployeeTypeLbl.ForeColor = System.Drawing.Color.Red;
-            this.EmployeeTypeLbl.Location = new System.Drawing.Point(535, 9);
+            this.EmployeeTypeLbl.Location = new System.Drawing.Point(510, 9);
             this.EmployeeTypeLbl.Name = "EmployeeTypeLbl";
             this.EmployeeTypeLbl.Size = new System.Drawing.Size(0, 13);
             this.EmployeeTypeLbl.TabIndex = 25;
