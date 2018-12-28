@@ -37,16 +37,16 @@
             this.ExitLbl = new System.Windows.Forms.Label();
             this.EmployeeTypeLbl = new System.Windows.Forms.Label();
             this.IssuecardLbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 29.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 18);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(14, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 44);
+            this.label6.Size = new System.Drawing.Size(234, 67);
             this.label6.TabIndex = 24;
             this.label6.Text = "Services";
             // 
@@ -54,10 +54,9 @@
             // 
             this.withdrawLbl.AutoSize = true;
             this.withdrawLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.withdrawLbl.Location = new System.Drawing.Point(238, 213);
-            this.withdrawLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.withdrawLbl.Location = new System.Drawing.Point(357, 328);
             this.withdrawLbl.Name = "withdrawLbl";
-            this.withdrawLbl.Size = new System.Drawing.Size(88, 22);
+            this.withdrawLbl.Size = new System.Drawing.Size(139, 33);
             this.withdrawLbl.TabIndex = 3;
             this.withdrawLbl.Text = "Withdraw";
             this.withdrawLbl.Click += new System.EventHandler(this.withdrawLbl_Click);
@@ -66,10 +65,9 @@
             // 
             this.transferFundsLbl.AutoSize = true;
             this.transferFundsLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transferFundsLbl.Location = new System.Drawing.Point(218, 130);
-            this.transferFundsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.transferFundsLbl.Location = new System.Drawing.Point(327, 200);
             this.transferFundsLbl.Name = "transferFundsLbl";
-            this.transferFundsLbl.Size = new System.Drawing.Size(138, 22);
+            this.transferFundsLbl.Size = new System.Drawing.Size(213, 33);
             this.transferFundsLbl.TabIndex = 2;
             this.transferFundsLbl.Text = "Transfer Funds";
             this.transferFundsLbl.Click += new System.EventHandler(this.transferFundsLbl_Click);
@@ -78,10 +76,9 @@
             // 
             this.depositLbl.AutoSize = true;
             this.depositLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.depositLbl.Location = new System.Drawing.Point(247, 254);
-            this.depositLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.depositLbl.Location = new System.Drawing.Point(370, 391);
             this.depositLbl.Name = "depositLbl";
-            this.depositLbl.Size = new System.Drawing.Size(76, 22);
+            this.depositLbl.Size = new System.Drawing.Size(114, 33);
             this.depositLbl.TabIndex = 4;
             this.depositLbl.Text = "Deposit";
             this.depositLbl.Click += new System.EventHandler(this.depositLbl_Click);
@@ -90,10 +87,9 @@
             // 
             this.settingsLbl.AutoSize = true;
             this.settingsLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsLbl.Location = new System.Drawing.Point(247, 294);
-            this.settingsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.settingsLbl.Location = new System.Drawing.Point(370, 452);
             this.settingsLbl.Name = "settingsLbl";
-            this.settingsLbl.Size = new System.Drawing.Size(79, 22);
+            this.settingsLbl.Size = new System.Drawing.Size(120, 33);
             this.settingsLbl.TabIndex = 5;
             this.settingsLbl.Text = "Settings";
             this.settingsLbl.Click += new System.EventHandler(this.settingsLbl_Click);
@@ -102,9 +98,10 @@
             // 
             this.openAccountLbl.AutoSize = true;
             this.openAccountLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openAccountLbl.Location = new System.Drawing.Point(177, 87);
+            this.openAccountLbl.Location = new System.Drawing.Point(266, 134);
+            this.openAccountLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.openAccountLbl.Name = "openAccountLbl";
-            this.openAccountLbl.Size = new System.Drawing.Size(219, 22);
+            this.openAccountLbl.Size = new System.Drawing.Size(338, 33);
             this.openAccountLbl.TabIndex = 1;
             this.openAccountLbl.Text = "Open a new sub-account";
             this.openAccountLbl.Click += new System.EventHandler(this.openAccountLbl_Click);
@@ -113,10 +110,9 @@
             // 
             this.ExitLbl.AutoSize = true;
             this.ExitLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitLbl.Location = new System.Drawing.Point(265, 335);
-            this.ExitLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ExitLbl.Location = new System.Drawing.Point(392, 630);
             this.ExitLbl.Name = "ExitLbl";
-            this.ExitLbl.Size = new System.Drawing.Size(41, 22);
+            this.ExitLbl.Size = new System.Drawing.Size(62, 33);
             this.ExitLbl.TabIndex = 6;
             this.ExitLbl.Text = "Exit";
             this.ExitLbl.Click += new System.EventHandler(this.ExitLbl_Click);
@@ -125,27 +121,41 @@
             // 
             this.EmployeeTypeLbl.AutoSize = true;
             this.EmployeeTypeLbl.ForeColor = System.Drawing.Color.Red;
-            this.EmployeeTypeLbl.Location = new System.Drawing.Point(510, 9);
+            this.EmployeeTypeLbl.Location = new System.Drawing.Point(765, 14);
+            this.EmployeeTypeLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EmployeeTypeLbl.Name = "EmployeeTypeLbl";
-            this.EmployeeTypeLbl.Size = new System.Drawing.Size(0, 13);
+            this.EmployeeTypeLbl.Size = new System.Drawing.Size(0, 20);
             this.EmployeeTypeLbl.TabIndex = 25;
             // 
             // IssuecardLbl
             // 
             this.IssuecardLbl.AutoSize = true;
             this.IssuecardLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IssuecardLbl.Location = new System.Drawing.Point(227, 171);
+            this.IssuecardLbl.Location = new System.Drawing.Point(340, 263);
+            this.IssuecardLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.IssuecardLbl.Name = "IssuecardLbl";
-            this.IssuecardLbl.Size = new System.Drawing.Size(114, 22);
+            this.IssuecardLbl.Size = new System.Drawing.Size(173, 33);
             this.IssuecardLbl.TabIndex = 26;
             this.IssuecardLbl.Text = "Issue a card";
             this.IssuecardLbl.Click += new System.EventHandler(this.IssuecardLbl_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(307, 500);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(252, 33);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "View Transactions";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // services_page
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(939, 683);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.IssuecardLbl);
             this.Controls.Add(this.EmployeeTypeLbl);
             this.Controls.Add(this.ExitLbl);
@@ -156,7 +166,6 @@
             this.Controls.Add(this.withdrawLbl);
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "services_page";
             this.Text = "services_page";
             this.ResumeLayout(false);
@@ -175,5 +184,6 @@
         private System.Windows.Forms.Label ExitLbl;
         private System.Windows.Forms.Label EmployeeTypeLbl;
         private System.Windows.Forms.Label IssuecardLbl;
+        private System.Windows.Forms.Label label1;
     }
 }
