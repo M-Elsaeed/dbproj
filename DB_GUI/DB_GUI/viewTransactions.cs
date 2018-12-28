@@ -25,7 +25,7 @@ namespace DB_GUI
             string sortDir = sortDirDrop.Text;
             int minAmount = minAmountField.Text == "" ? 0 : Int32.Parse(minAmountField.Text);
             int maxAmount = maxAmountField.Text == "" ? Int32.MaxValue : Int32.Parse(maxAmountField.Text);
-            DBInit.cmd.CommandText = "select national_id,person_name,from_account,to_account,amount" +
+            DBInit.cmd.CommandText = "(select national_id,person_name,from_account,to_account,amount" +
                                      "from person inner join customer on person.national_id = customer.id" +
                                      "inner join (" +
                                      "            select * " +
@@ -38,12 +38,25 @@ namespace DB_GUI
                                      "                        (" +
                                      "                        select SWIFT" +
                                      "                        from branches " +
-                                     "                        where b_name like ' " + fromBranchField + "'" +
+                                     "                        where b_name like ' " + frBranch + "'" +
                                      "                        )" +
                                      "            )" +
-                                     "on Tfrom.from_accountid = customer.account_id"
+                                     "on Tfrom.from_accountid = customer.account_id)"
                                     ;
-            if (!(frBranch == "" && toBranch == ""))
+            if (sort != "")
+            {
+                if(sort=="Customer Name")
+                    DBInit.cmd.CommandText += "order by person_name";
+                else
+                    DBInit.cmd.CommandText += "order by amount";
+                if (sortDir != "")
+                {
+                    DBInit.cmd.CommandText += "order by " + sortDir;
+                }
+
+            }
+
+            if (!(frBranch == ""))
             {
 
                 MySqlDataReader reader = DBInit.cmd.ExecuteReader();
@@ -88,6 +101,11 @@ namespace DB_GUI
         }
 
         private void sortDirDrop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewTransactions_Load(object sender, EventArgs e)
         {
 
         }

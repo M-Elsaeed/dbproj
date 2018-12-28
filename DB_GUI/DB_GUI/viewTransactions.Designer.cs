@@ -197,9 +197,9 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(18, 140);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 26);
+            this.label13.Size = new System.Drawing.Size(63, 26);
             this.label13.TabIndex = 48;
-            this.label13.Text = "To/From";
+            this.label13.Text = "From";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label11
@@ -273,6 +273,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "viewTransactions";
             this.Text = "viewTransactions";
+            this.Load += new System.EventHandler(this.viewTransactions_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
