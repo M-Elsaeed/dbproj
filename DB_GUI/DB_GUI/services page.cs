@@ -103,5 +103,12 @@ namespace DB_GUI
             Program.viewTransactions.Show();
             this.Hide();
         }
+
+        private void cityAvg_Click(object sender, EventArgs e)
+        {
+            Program.cityAvg = new CityAvg();
+            Program.cityAvg.Show();
+            this.Hide();
+        }
     }
 }
