@@ -21,7 +21,6 @@ namespace DB_GUI
         private void transferBtn_Click(object sender, EventArgs e)
         {
             string frBranch = fromBranchField.Text;
-            string toBranch = toBranchField.Text;
             string sort = sortDrop.Text;
             string sortDir = sortDirDrop.Text;
             int minAmount = minAmountField.Text == "" ? 0 : Int32.Parse(minAmountField.Text);
@@ -42,7 +41,7 @@ namespace DB_GUI
                                      "                        where b_name like ' " + fromBranchField + "'" +
                                      "                        )" +
                                      "            )" +
-                                     "on Tfrom.from_accountid = customer.id"
+                                     "on Tfrom.from_accountid = customer.account_id"
                                     ;
             if (!(frBranch == "" && toBranch == ""))
             {
