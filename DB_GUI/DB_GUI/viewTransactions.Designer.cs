@@ -40,11 +40,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.toBranchField = new System.Windows.Forms.TextBox();
             this.fromBranchField = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -174,16 +171,6 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "From";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(120, 214);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 26);
-            this.label4.TabIndex = 55;
-            this.label4.Text = "Branch Name";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -195,15 +182,6 @@
             this.label5.Text = "Branch Name";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // toBranchField
-            // 
-            this.toBranchField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toBranchField.Location = new System.Drawing.Point(272, 210);
-            this.toBranchField.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.toBranchField.Name = "toBranchField";
-            this.toBranchField.Size = new System.Drawing.Size(182, 32);
-            this.toBranchField.TabIndex = 53;
-            // 
             // fromBranchField
             // 
             this.fromBranchField.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -213,25 +191,16 @@
             this.fromBranchField.Size = new System.Drawing.Size(182, 32);
             this.fromBranchField.TabIndex = 51;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(18, 217);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(36, 26);
-            this.label12.TabIndex = 49;
-            this.label12.Text = "To";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(18, 140);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 26);
+            this.label13.Size = new System.Drawing.Size(93, 26);
             this.label13.TabIndex = 48;
-            this.label13.Text = "From";
+            this.label13.Text = "To/From";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label11
             // 
@@ -269,12 +238,13 @@
             // 
             this.sortDirDrop.FormattingEnabled = true;
             this.sortDirDrop.Items.AddRange(new object[] {
-            "Ascending",
-            "Decending"});
+            "asc",
+            "desc"});
             this.sortDirDrop.Location = new System.Drawing.Point(629, 387);
             this.sortDirDrop.Name = "sortDirDrop";
             this.sortDirDrop.Size = new System.Drawing.Size(121, 28);
             this.sortDirDrop.TabIndex = 61;
+            this.sortDirDrop.SelectedIndexChanged += new System.EventHandler(this.sortDirDrop_SelectedIndexChanged);
             // 
             // viewTransactions
             // 
@@ -285,11 +255,8 @@
             this.Controls.Add(this.sortDrop);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.toBranchField);
             this.Controls.Add(this.fromBranchField);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.label10);
@@ -325,11 +292,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox toBranchField;
         private System.Windows.Forms.TextBox fromBranchField;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
