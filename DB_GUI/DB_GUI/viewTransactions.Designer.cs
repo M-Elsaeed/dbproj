@@ -1,6 +1,6 @@
 ﻿namespace DB_GUI
 {
-    partial class viewTransactions
+    partial class ViewTransaction
     {
         /// <summary>
         /// Required designer variable.
@@ -246,7 +246,7 @@
             this.sortDirDrop.TabIndex = 61;
             this.sortDirDrop.SelectedIndexChanged += new System.EventHandler(this.sortDirDrop_SelectedIndexChanged);
             // 
-            // viewTransactions
+            // ViewTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -271,8 +271,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "viewTransactions";
-            this.Text = "viewTransactions";
+            this.Name = "ViewTransaction";
+            this.Text = "ViewTransaction";
             this.Load += new System.EventHandler(this.viewTransactions_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

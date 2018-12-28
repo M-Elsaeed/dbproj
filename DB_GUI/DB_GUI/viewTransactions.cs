@@ -11,49 +11,48 @@ using System.Windows.Forms;
 
 namespace DB_GUI
 {
-    public partial class viewTransactions : Form
+    public partial class ViewTransaction : Form
     {
-        public viewTransactions()
+        public ViewTransaction()
         {
             InitializeComponent();
         }
 
         private void transferBtn_Click(object sender, EventArgs e)
         {
+            DBInit.cmd.CommandText = "";
             string frBranch = fromBranchField.Text;
             string sort = sortDrop.Text;
             string sortDir = sortDirDrop.Text;
             int minAmount = minAmountField.Text == "" ? 0 : Int32.Parse(minAmountField.Text);
             int maxAmount = maxAmountField.Text == "" ? Int32.MaxValue : Int32.Parse(maxAmountField.Text);
-            DBInit.cmd.CommandText = "(select national_id,person_name,from_account,to_account,amount" +
-                                     "from person inner join customer on person.national_id = customer.id" +
-                                     "inner join (" +
-                                     "            select * " +
-                                     "            from transaction as Tfrom" +
-                                     "            where Tfrom.id in" +
-                                     "                  (" +
-                                     "                  select transaction_id" +
-                                     "                  from branch_transactions" +
-                                     "                  where branch_transactions in" +
-                                     "                        (" +
-                                     "                        select SWIFT" +
-                                     "                        from branches " +
-                                     "                        where b_name like ' " + frBranch + "'" +
-                                     "                        )" +
-                                     "            )" +
-                                     "on Tfrom.from_accountid = customer.account_id)"
-                                    ;
+
+            DBInit.cmd.CommandText = "SELECT national_id, person_name, from_account, to_account, amount FROM person INNER JOIN customers ON person.national_id = customers.id INNER JOIN(SELECT * FROM transactions AS Tfrom WHERE Tfrom.id IN (SELECT transaction_id FROM branch_transaction WHERE branch_transaction.transaction_id IN ( SELECT SWIFT FROM branches WHERE b_name LIKE \"" +
+                frBranch +
+                "\") ) )as T where amount >=" +
+                minAmount +
+                " and " +
+                "amount<=" +
+                maxAmount;
             if (sort != "")
             {
-                if(sort=="Customer Name")
-                    DBInit.cmd.CommandText += "order by person_name";
+                if (sort == "Customer Name")
+                    DBInit.cmd.CommandText += " order by person.person_name ";
                 else
-                    DBInit.cmd.CommandText += "order by amount";
+                    DBInit.cmd.CommandText += " order by amount ";
                 if (sortDir != "")
                 {
-                    DBInit.cmd.CommandText += "order by " + sortDir;
+                    DBInit.cmd.CommandText += sortDir + ";";
+                }
+                else
+                {
+                    DBInit.cmd.CommandText += ";";
                 }
 
+            }
+            else
+            {
+                DBInit.cmd.CommandText += ";";
             }
 
             if (!(frBranch == ""))
@@ -61,12 +60,13 @@ namespace DB_GUI
 
                 MySqlDataReader reader = DBInit.cmd.ExecuteReader();
                 MessageBox.Show("Query successful");
-
+                reader.Close();
             }
             else
             {
                 MessageBox.Show("Please fill form fields");
             }
+
         }
 
         private void label6_Click(object sender, EventArgs e)

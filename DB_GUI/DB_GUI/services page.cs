@@ -96,5 +96,12 @@ namespace DB_GUI
             Program.IssueCardForm.Show();
             this.Hide();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Program.viewTransactions = new ViewTransaction();
+            Program.viewTransactions.Show();
+            this.Hide();
+        }
     }
 }
