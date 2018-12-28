@@ -110,5 +110,12 @@ namespace DB_GUI
             Program.cityAvg.Show();
             this.Hide();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Program.issuersByCity = new IssuersByCity();
+            Program.issuersByCity.Show();
+            this.Hide();
+        }
     }
 }

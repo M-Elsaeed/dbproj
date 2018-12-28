@@ -16,6 +16,7 @@ namespace DB_GUI
         public static IssueCard IssueCardForm;
         public static ViewTransaction viewTransactions;
         public static CityAvg cityAvg;
+        public static IssuersByCity issuersByCity;
         public static int RoleID = 0;
 
         [STAThread]

@@ -39,6 +39,7 @@
             this.IssuecardLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cityAvg = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
@@ -111,7 +112,7 @@
             // 
             this.ExitLbl.AutoSize = true;
             this.ExitLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitLbl.Location = new System.Drawing.Point(392, 630);
+            this.ExitLbl.Location = new System.Drawing.Point(395, 685);
             this.ExitLbl.Name = "ExitLbl";
             this.ExitLbl.Size = new System.Drawing.Size(62, 33);
             this.ExitLbl.TabIndex = 6;
@@ -162,11 +163,23 @@
             this.cityAvg.Text = "View Avg Balance By City";
             this.cityAvg.Click += new System.EventHandler(this.cityAvg_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(340, 630);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(166, 33);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "City Issuers";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // services_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 683);
+            this.ClientSize = new System.Drawing.Size(939, 747);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cityAvg);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.IssuecardLbl);
@@ -199,5 +212,6 @@
         private System.Windows.Forms.Label IssuecardLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label cityAvg;
+        private System.Windows.Forms.Label label2;
     }
 }
